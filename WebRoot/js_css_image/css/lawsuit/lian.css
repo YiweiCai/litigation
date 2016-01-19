@@ -1,0 +1,27 @@
+.content .row .breadcrumb2{float:left;padding-top:5px}.content .row .search{float:right}.content .row .search .search_box{border:1px solid #c8c8c8;color:#c8c8c8;border-radius:5px;padding-left:5px;width:180px;height:20px}
+.content .row .search .search_btn{background:url('../images/search_btn.gif') no-repeat center center;margin-left:-24px;width:20px;border:0;cursor:pointer}
+.content .row .content_table{clear:both;padding-top:5px}.content .row .content_table .table{width:100%;margin-bottom:20px}.content .row .content_table .table thead td{text-align:center;color:#62a820}
+.content .row .content_table .table td{border-left:3px solid #fff;border-right:3px solid #fff;padding-left:5px;text-align:left;height:25px}.content .row .content_table .table_border td{border-left:none;border-right:0;border-bottom:1px solid #d2d2d2}
+.content .row h3{text-align:center}.content .row .table_title{background:#f2f2f2;margin-bottom:0;padding:5px}.content .row .lian_content{float:left;width:720px;}
+.content .row .lian_content h3 a{margin-left:10px;font-size:12px;font-weight:100}.content .row .lian_content p{text-indent:2em}.content .row .lian_content .xieyi{margin-top:30px}
+.content .row .lian_content .shenqing{text-align:center;margin-top:50px}.content .row .chaxun{margin-top:15px;float:right;width:190px;border:1px dotted #000}
+.content .row .chaxun h3{color:#62a820;border-bottom:1px dotted #000;padding-bottom:18px}.content .row .chaxun table{width:100%;margin-bottom:20px}.content .row .chaxun table td{text-align:center;height:40px}
+.content .row .chaxun .short{width:110px}.content .row .setps{margin-top:10px;height:63px;background:url('../images/liucheng.jpg') no-repeat}
+.content .row .setp1{background-position:0 0}.content .row .setp2{background-position:0 -64px}.content .row .setp3{background-position:0 -126px}.content .row .setp4{background-position:0 -189px}
+.content .row .setp5{background-position:0 -252px}.content .row .setp6{background-position:0 -314px}.content .row .lead_ul{margin:0;padding:0}.content .row .lead_ul li{padding:10px 0;display:block;list-style:none;vertical-align:middle;float:left;width:120px}
+.content .row .lead_ul .active{background:#f2f2f2}.content .row .message_input{padding-left:60px}.content .row .message_input table td{height:30px}.content .row .lead_btn{text-align:center}
+.content .row .message_add{padding:5px;background:#bade93;margin-top:10px}.content .row .message_add button{margin-left:10px}.content .row .message_ziran div{margin-bottom:8px}
+.content .row .message_ziran .long{width:150px}.content .row .message_ziran input{margin-right:5px;margin-left:2px}.content .row .message_ziran .short{width:60px}
+.content .row .message_ziran h3{background:#f2f2f2;padding:5px}.content .row .message_title{text-align:left}.content .row .message_title .btn{font-weight:normal;padding:0 12px;font-size:10px}
+.content .row .zhengju{margin-bottom:0px;margin-left:0px; }.content .row .tips{padding:5px;color:#949494}.content .row .send_result{font-size:16px;font-weight:bold;text-align:center;padding:100px 0;background:#f0f0f0;margin-top:10px}
+.content .row .message_result h3{background:#f2f2f2;padding:5px}.content .row .message_result p{text-align:center}.row .yong_lead{height:30px}.row .yong_lead div{float:left;width:23.5%}
+.row .yong_lead div a{display:block;font-weight:bold;padding:5px 0;text-align:center;width:100%;background:#e2e2e2}.row .yong_lead div a:hover,.row .yong_lead a.active{color:#000;background:#bade94}
+.row .yong_title{padding:20px;border:1px solid #000}.row .yong_title #feiyongresult{color:#61a720;font-weight:bold;margin:0;padding-left:20px}.row .yong_title span{font-weight:normal;padding-left:20px;color:#000}
+.row .yong_title span input{margin-left:5px;margin-right:5px}.row .nav_content ul{margin-left:270px;width:150px}.row .nav_content ul li{cursor:pointer;list-style:url('../images/li_1.gif')}
+.row .nav_content .nav_items{margin-left:-20px}.row .nav_content .nav_items li{list-style:url('../images/li_2.gif')}.sifa_content{padding-left:250px}
+.sifa_content table td{vertical-align:middle;height:30px}.sifa_content table td img{padding-left:3px}.sifa_content table .center{text-align:center}.row .jiuzhu_title .btn{font-weight:normal;font-size:9px;padding:0 12px}
+.row .table_jiuzhu{width:100%}.row .table_jiuzhu td{padding:5px 0 5px 5px}.row .table_jiuzhu td textarea{width:100%}.row .si_help{padding:0 5px 10px 5px;height:90px;border:1px solid #000}
+.row .si_help p{float:left;margin:5px;width:80%;text-indent:2em}.row .nav_text .title{text-indent:2em;background:url('../images/jia.gif') no-repeat 0 -16px}
+.row .nav_text .actived{background-position:0 5px}.row .feiyong,.row .leixing{float:left;margin-left:30px}.selectitem{border:1px solid #b6d791;overflow:hidden;width:200px;height:30px;background:#dceec9;cursor:pointer}
+.selectitem dd.hover{background-color:#c4e3a2}.selectitem dt{padding:7px}.selectitem dd{padding-left:7px}.selectitem dt{background:transparent url('../images/20101031sprite.png') no-repeat 170px 0}
+.selectitem dt.shrink{background-position:170px 0}.selectitem dt.drop{background-position:170px -30px}.row .he_lead div{width:48%}

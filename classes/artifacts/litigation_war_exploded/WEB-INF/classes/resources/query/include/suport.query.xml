@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<queryMapping>
+	<!-- 查询专家 -->
+	<query name="suport.findExperts">
+		<hql>
+		    <![CDATA[
+		        select expert from Expert as expert
+		        where 1=1
+	            <#if name??>
+		            and expert.name like:name
+		        </#if> 
+		        <#if title??>
+		            and expert.title=:title
+		        </#if> 
+	            <#if industry??>
+		            and expert.industry=:industry 
+		        </#if> 
+		        <#if researchField??>
+		            and expert.researchField like:researchField 
+		        </#if>
+		        <#if researchDirection??>
+		            and expert.researchDirection like:researchDirection
+		        </#if>
+		         order by expert.createTime desc
+		    ]]>
+		</hql>
+	</query>
+	
+	<!-- 查询科技成果 -->
+	<query name="suport.findAchievements">
+		<hql>
+		    <![CDATA[
+		        select achievement from Achievement as achievement
+		        where 1=1
+	            <#if achievementName??>
+		            and achievement.achievementName like:achievementName
+		        </#if> 
+		        <#if industry??>
+		            and achievement.industry=:industry
+		        </#if> 
+	            <#if patentType??>
+		            and achievement.patentType=:patentType 
+		        </#if> 
+		        <#if patentNo??>
+		            and achievement.patentNo like:patentNo 
+		        </#if>
+		         order by achievement.publishTime desc
+		    ]]>
+		</hql>
+	</query>
+</queryMapping>

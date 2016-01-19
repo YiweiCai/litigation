@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!--package name="home" extends="default" namespace="/">
+	     <action name="*" class="core.HomeAction" method="{1}">
+	        <result name="index">/front/jsp/index.jsp</result>
+	     </action>
+	</package-->
+	
+	<!-- 郑州法院 -->
+	<package name="core" extends="default" namespace="/zzfy/core">
+	     <!-- 资源 -->
+	     <action name="resource_*" class="core.ResourceAction" method="{1}">
+	        <result name="list">/WEB-INF/jsp/core/resource/list.jsp</result>
+	        <result name="add">/WEB-INF/jsp/core/resource/add.jsp</result>
+	        <!-- 前台列表  -->
+	        <result name="flist">/WEB-INF/jsp/core/resource/flist.jsp</result>
+	        <!-- 前台详细页 -->
+	        <result name="detail">/WEB-INF/jsp/core/resource/detail.jsp</result>
+	        <!-- 以下为栏目块 -->
+	        <result name="newtop">/WEB-INF/jsp/core/resource/common/newtop.jsp</result>
+	        <result name="downtop">/WEB-INF/jsp/core/resource/common/downtop.jsp</result>
+	        <result name="quality">/WEB-INF/jsp/core/resource/common/quality.jsp</result>
+	     </action>
+	</package>
+	<package name="myCenter" extends="default" namespace="/zzfy/myCenter">
+	     <!-- 个人中心 -->
+	     <action name="*" class="core.MyCenterAction" method="{1}">
+	     	<!-- 个人信息  -->
+	        <result name="info">/front/jsp/myCenter/info.jsp</result>
+	        <!-- 修改密码 -->
+	        <result name="changePwd">/front/jsp/myCenter/changePwd.jsp</result>
+	        <!-- 更改信息  -->
+	        <result name="changeInfo">/front/jsp/myCenter/changeInfo.jsp</result>
+	        <!-- 注册  -->
+	        <result name="register">/front/jsp/myCenter/register.jsp</result>
+	        
+	        <result name="loginFront">/front/jsp/myCenter/login.jsp</result>
+	        <!-- 发布资源 -->
+	        <result name="upload">/front/jsp/myCenter/upload.jsp</result>
+	        <!-- 我发布的资源 -->
+	        <result name="uploads">/front/jsp/myCenter/uploads.jsp</result>
+	        <!-- 我下载的资源 -->
+	        <result name="downloads">/front/jsp/myCenter/downloads.jsp</result>
+	        
+	        <result name="readAgreement">/front/jsp/myCenter/readAgreement.jsp</result>
+	        
+	        <result name="address">/front/jsp/myCenter/address.jsp</result>
+	        
+	        <result name="totallogin">/front/jsp/myCenter/totallogin.jsp</result>
+	        
+	        <result name="totalreg">/front/jsp/myCenter/totalreg.jsp</result>
+	        
+	        <result name="daibiaologin">/front/jsp/myCenter/daibiaologin.jsp</result>
+	        
+	        <result name="layerlogin">/front/jsp/myCenter/layerlogin.jsp</result>
+	        
+	        <result name="layerreg">/front/jsp/myCenter/layerreg.jsp</result>
+	        
+	        <result name="daibiaoreg">/front/jsp/myCenter/daibiaoreg.jsp</result>
+	     </action>
+	</package>
+	
+	<!-- 新郑法院 -->
+	<package name="xzcore" extends="default" namespace="/xzfy/core">
+	     <!-- 资源 -->
+	     <action name="resource_*" class="core.ResourceAction" method="{1}">
+	        <result name="list">/WEB-INF/jsp/core/resource/list.jsp</result>
+	        <result name="add">/WEB-INF/jsp/core/resource/add.jsp</result>
+	        <!-- 前台列表  -->
+	        <result name="flist">/WEB-INF/jsp/core/resource/flist.jsp</result>
+	        <!-- 前台详细页 -->
+	        <result name="detail">/WEB-INF/jsp/core/resource/detail.jsp</result>
+	        <!-- 以下为栏目块 -->
+	        <result name="newtop">/WEB-INF/jsp/core/resource/common/newtop.jsp</result>
+	        <result name="downtop">/WEB-INF/jsp/core/resource/common/downtop.jsp</result>
+	        <result name="quality">/WEB-INF/jsp/core/resource/common/quality.jsp</result>
+	     </action>
+	</package>
+	<package name="xzmyCenter" extends="default" namespace="/xzfy/myCenter">
+	     <!-- 个人中心 -->
+	     <action name="*" class="core.MyCenterAction" method="{1}">
+	     	<!-- 个人信息  -->
+	        <result name="info">/front/jsp/myCenter/info.jsp</result>
+	        <!-- 修改密码 -->
+	        <result name="changePwd">/front/jsp/myCenter/changePwd.jsp</result>
+	        <!-- 更改信息  -->
+	        <result name="changeInfo">/front/jsp/myCenter/changeInfo.jsp</result>
+	        <!-- 注册  -->
+	        <result name="register">/front/jsp/myCenter/register.jsp</result>
+	        
+	        <result name="loginFront">/front/jsp/myCenter/login.jsp</result>
+	        <!-- 发布资源 -->
+	        <result name="upload">/front/jsp/myCenter/upload.jsp</result>
+	        <!-- 我发布的资源 -->
+	        <result name="uploads">/front/jsp/myCenter/uploads.jsp</result>
+	        <!-- 我下载的资源 -->
+	        <result name="downloads">/front/jsp/myCenter/downloads.jsp</result>
+	        
+	        <result name="readAgreement">/front/jsp/myCenter/readAgreement.jsp</result>
+	        
+	        <result name="address">/front/jsp/myCenter/address.jsp</result>
+	        
+	        <result name="totallogin">/front/jsp/myCenter/totallogin.jsp</result>
+	        
+	        <result name="totalreg">/front/jsp/myCenter/totalreg.jsp</result>
+	        
+	        <result name="daibiaologin">/front/jsp/myCenter/daibiaologin.jsp</result>
+	        
+	        <result name="layerlogin">/front/jsp/myCenter/layerlogin.jsp</result>
+	        
+	        <result name="layerreg">/front/jsp/myCenter/layerreg.jsp</result>
+	        
+	        <result name="daibiaoreg">/front/jsp/myCenter/daibiaoreg.jsp</result>
+	     </action>
+	</package>
+	
+	<!-- 荥阳法院 -->
+	<package name="xycore" extends="default" namespace="/xyfy/core">
+	     <!-- 资源 -->
+	     <action name="resource_*" class="core.ResourceAction" method="{1}">
+	        <result name="list">/WEB-INF/jsp/core/resource/list.jsp</result>
+	        <result name="add">/WEB-INF/jsp/core/resource/add.jsp</result>
+	        <!-- 前台列表  -->
+	        <result name="flist">/WEB-INF/jsp/core/resource/flist.jsp</result>
+	        <!-- 前台详细页 -->
+	        <result name="detail">/WEB-INF/jsp/core/resource/detail.jsp</result>
+	        <!-- 以下为栏目块 -->
+	        <result name="newtop">/WEB-INF/jsp/core/resource/common/newtop.jsp</result>
+	        <result name="downtop">/WEB-INF/jsp/core/resource/common/downtop.jsp</result>
+	        <result name="quality">/WEB-INF/jsp/core/resource/common/quality.jsp</result>
+	     </action>
+	</package>
+	<package name="xymyCenter" extends="default" namespace="/xyfy/myCenter">
+	     <!-- 个人中心 -->
+	     <action name="*" class="core.MyCenterAction" method="{1}">
+	     	<!-- 个人信息  -->
+	        <result name="info">/front/jsp/myCenter/info.jsp</result>
+	        <!-- 修改密码 -->
+	        <result name="changePwd">/front/jsp/myCenter/changePwd.jsp</result>
+	        <!-- 更改信息  -->
+	        <result name="changeInfo">/front/jsp/myCenter/changeInfo.jsp</result>
+	        <!-- 注册  -->
+	        <result name="register">/front/jsp/myCenter/register.jsp</result>
+	        
+	        <result name="loginFront">/front/jsp/myCenter/login.jsp</result>
+	        <!-- 发布资源 -->
+	        <result name="upload">/front/jsp/myCenter/upload.jsp</result>
+	        <!-- 我发布的资源 -->
+	        <result name="uploads">/front/jsp/myCenter/uploads.jsp</result>
+	        <!-- 我下载的资源 -->
+	        <result name="downloads">/front/jsp/myCenter/downloads.jsp</result>
+	        
+	        <result name="readAgreement">/front/jsp/myCenter/readAgreement.jsp</result>
+	        
+	        <result name="address">/front/jsp/myCenter/address.jsp</result>
+	        
+	        <result name="totallogin">/front/jsp/myCenter/totallogin.jsp</result>
+	        
+	        <result name="totalreg">/front/jsp/myCenter/totalreg.jsp</result>
+	        
+	        <result name="daibiaologin">/front/jsp/myCenter/daibiaologin.jsp</result>
+	        
+	        <result name="layerlogin">/front/jsp/myCenter/layerlogin.jsp</result>
+	        
+	        <result name="layerreg">/front/jsp/myCenter/layerreg.jsp</result>
+	        
+	        <result name="daibiaoreg">/front/jsp/myCenter/daibiaoreg.jsp</result>
+	     </action>
+	</package>
+	
+</struts>

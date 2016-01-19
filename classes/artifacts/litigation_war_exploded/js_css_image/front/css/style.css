@@ -1,0 +1,59 @@
+/*按照元素模型由外及内,由整体到细节书写,大致分为五组:
+位置:position,left,right,float
+盒模型属性:display,margin,padding,width,height
+边框与背景:border,background
+段落与文本:line-height,text-indent,font,color,text-decoration,...
+其他属性:overflow,cursor,visibility,...*/
+.banner { width:960px; height:217px;}
+.icont { padding:10px 0 30px 0; width: 960px; height:auto; overflow:hidden; background:#fff url(../images/conttop.jpg) no-repeat;}
+/* 左侧内容开始 */
+.icontleft { float:left; margin-left:20px; width:208px; height:auto; overflow:hidden;}
+.leftmenu { float:right; width:208px;}
+.lmenutitle { width:208px; height:46px; background:url(../images/icont_top.jpg) no-repeat;  border-bottom:1px solid #558a01;}
+.lmenutitle span { width:100px; margin-left:50px; font:normal bold 15px/46px Arial, Helvetica, sans-serif; color:#fff;}
+ul.icontleftul { margin:0; padding:0 0 10px 0; width:208px; height:auto; overflow:hidden; background:url(../images/icont_bg.jpg) repeat-y; border-top:1px solid #b0d674;}
+ul.icontleftul li { margin:0 auto; width:208px; height:36px; background:url(../images/leftulbg.jpg) bottom no-repeat;}
+ul.icontleftul li span { float:left; margin-left:30px; width:4px; height:36px; background:url(../images/icon02.jpg) 0 15px no-repeat;}
+ul.icontleftul li a { float:left; margin-left:15px; width:100px; height:36px; font:normal 14px/36px Arial, Helvetica, sans-serif; color:#fff;}
+ul.icontleftul li:hover { background:#95c547;}
+.download { float:left; width:208px; height:75px; margin:12px 0 0 0;}
+/* 左侧内容结束 */
+/* 右侧内容开始 */
+.icontright { float:left; padding-top:6px; width:710px; height:auto; overflow:hidden;}
+.icontrtitle { padding-left:20px; margin-bottom:20px; width:690px; height:40px; border-bottom:1px solid #e4e4e4;}
+.icontrtitle span { float:left; width:100px; height:40px; font: normal bold 14px/40px Arial, Helvetica, sans-serif; color:#333;}
+.icontrtitle img { float:left;}
+.rtitle { float:right; width:240px; height:40px; font: normal 12px/40px Arial, Helvetica, sans-serif; color:#666;}
+.rtitle span { float:left; width:66px; font-weight:normal; font-size:12px;}
+.rtitle a { color:#666; font: normal 12px/40px Arial, Helvetica, sans-serif;}
+.rtitle a:hover { color:#70ac10; text-decoration:underline; font-weight:bold;}
+.mainright { float: left; padding-left:40px; width: 650px; height:auto; overflow:hidden; min-height: 340px; color: #474747;}
+.mainright p { text-indent:2em; font: normal 14px/28px Arial, Helvetica, sans-serif;}
+/* 右侧内容结束 */
+/* 新闻列表开始 */
+ul.newslist { width:640px; height:auto; overflow:hidden;}
+ul.newslist li { display:block; width:640px; height:40px; background:url(../images/icons1.jpg) 0 16px no-repeat; border-bottom:1px dashed #ccc; font: normal 14px/40px Arial, Helvetica, sans-serif;}
+ul.newslist li a { float:left; margin-left:13px; width:490px; height:40px; overflow:hidden; color:#474747;}
+ul.newslist li span { float:right;}
+ul.newslist li:hover { color:#ff6407;  background:url(../images/icons2.jpg) 0 16px no-repeat;}
+ul.newslist li:hover a { color:#ff6407; text-decoration:underline;}
+/* 新闻列表结束 */
+/* 分页代码开始 */
+.pages { width: 100%; height: 28px; margin: 14px 0; clear: both; float:right;}
+.pages ul {float: right;margin: 0 15px 0 0;display: inline;}
+.pages ul li {float: left;display: inline;margin: 0 7px 0 0;font:normal 14px/28px Arial, Helvetica, sans-serif;color: #000;width: 26px;height: 26px;border: 1px solid #ccc;background: #eee;text-align: center;}
+.pages ul li a { color:#474747;}
+.pages ul li.clickli {background: #ffb600;border: 1px solid #ffb600;}
+.pages ul li.clickli a{ color:#fff; font-weight:bold;}
+.pages ul li.prev, .pages ul li.next {width: 64px;height: 26px;background:#70ac10;border: 1px solid #eee;text-align: center;}
+.pages ul li.prev span, .pages ul li.next span { display:block; background:#eee;border: 1px solid #ccc;text-align: center;}
+.pages ul li.allpage {width: 136px;border: 0;background: none;}
+.allpage input {width: 26px;height: 26px;border: 1px solid #999;text-align: center;margin: 0 5px;color: #474747;font: 14px/26px Arial, Helvetica, sans-serif;}
+.pages ul li.ok {background: #70ac10;width: 53px;height: 26px;float: left;border: 1px solid #eee;}
+.pages ul li.prev a, .pages ul li.next a, .pages ul li.ok a { color:#fff;}
+/* 分页代码结束 */
+
+.mainright h2 { width:100%; height:40px; font:normal bold 18px/40px "microsoft yahei",Arial, Helvetica, sans-serif; text-align:center; color:#474747;}
+.mainright h4 {text-align: center;color: #aaa;font-size: 12px;line-height: 35px;padding-bottom: 20px;border-bottom: 1px dashed #cfcac1;margin-bottom: 25px;}
+
+

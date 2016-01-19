@@ -1,0 +1,602 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "微软雅黑", "宋体";
+}
+
+a {
+	text-decoration: none
+}
+
+div,img {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+h1,h2,ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bannerbg {
+	background: url(../images/casestep_02.png) repeat-x;
+	width: 100%;
+	height: 123px;
+	margin-bottom: 6px;
+}
+
+.layout {
+	width: 1000px;
+	margin: 0 auto
+}
+
+.red {
+	color: #BD0B00;
+	font-weight: bold
+}
+
+.gray {
+	color: #999
+}
+
+h1 {
+	padding-top: 18px;
+}
+
+.nav {
+	width: 770px;
+	color: #000000;
+	line-height: 34px;
+	float: right;
+	color: #0c0c0c;
+}
+
+.nav a {
+	color: #000000;
+	width: 88px;
+	height: 34px;
+	display: block;
+	float: left;
+	margin-left: 4px;
+	text-align: center;
+}
+
+.nav a:hover {
+	background: url(../images/casenav.png) no-repeat center;
+	width: 88px;
+	height: 34px;
+	color: #FFF;
+}
+
+.nav .choose {
+	background: url(../images/casenav.png) no-repeat center;
+	width: 88px;
+	height: 34px;
+	color: #FFF;
+}
+
+.sidenav {
+	width: 215px;
+	float: left;
+	font-size: 0;
+}
+
+.navlist {
+	width: 210px;
+	background: #0c6fa4; 
+	padding-bottom:30px;
+	 border-bottom-right-radius:10px;
+	 border-bottom-left-radius:10px;
+	  -moz-border-bottom-right-radius:10px;
+	 -moz-border-bottom-left-radius:10px;
+	  -webkit-border-bottom-right-radius:10px;
+	 -webkit-border-bottom-left-radius:10px;
+}
+
+.navlist ul {
+	
+}
+
+.navlist ul li img {
+	vertical-align: middle;
+	margin-right: 8px;
+	margin-left: 40px;
+}
+
+.navlist ul li {
+	width: 210px;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	color: #FFF;
+	font-size: 14px;
+}
+
+.navlist ul li a {
+	color: #FFF
+}
+
+.navlist ul li a:hover {
+	font-weight: bold
+}
+
+.navlist .selected {
+	font-weight: bold;
+	background: #062f52;
+	line-height: 40px;
+	height: 40px;
+}
+
+.content {
+	background: #f3fdfe;
+	width: 754px;
+	float: right;
+	padding: 8px 12px;
+	font-size: 12px
+}
+
+.content span {
+	font-weight: bold;
+	font-size: 14px;
+	clear: both;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+}
+
+.line {
+	border-bottom: #063752 dashed 1px;
+	width: 200px;
+	margin: 0 auto;
+	height: 1px;
+	clear: both;
+}
+/*版权*/
+.copyrightbg {
+	background: url(../images/copyrightbg.jpg) repeat-x;
+	width: 100%;
+	height: 94px;
+	padding-top: 10px;
+	margin-top: 10px;
+	clear: both;
+}
+
+.copyright {
+	width: 1000px;
+	margin: 6px auto;
+	text-align: center;
+	font-size: 12px;
+	line-height: 20px;
+}
+/*注册信息页*/
+.acceptbut {
+	background: url(../images/accept.jpg) no-repeat;
+	width: 63px;
+	height: 33px;
+	margin: 6px auto;
+	cursor: pointer
+}
+
+.regcontent {
+	background: #f6fcfc;
+	border: #81acbf solid 1px;
+	width: 774px;
+	float: right;
+	padding: 8px 0px;
+	font-size: 12px;
+	height: auto;
+	text-align: center;
+	position: relative;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	padding-top: 50px;
+}
+
+.regcontent ul {
+	width: 700px;
+}
+
+.regcontent ul li {
+	float: left;
+	clear: both;
+	margin-top: 14px;
+	margin-left: 160px;
+	width: 360px;
+}
+
+.regtitle {
+	background: url(../images/regtitlebg.png) no-repeat;
+	width: 497px;
+	height: 52px;
+	z-index: 2;
+	position: absolute;
+	left: 156px;
+	top: -7px;
+	text-align: center;
+	line-height: 50px;
+	color: #FFF;
+	font-size: 18px;
+}
+
+.inputstyle {
+	width: 200px;
+	height: 24px;
+	float: left;
+}
+
+.length {
+	width: 120px;
+	text-align: right;
+	line-height: 24px;
+	float: left;
+}
+
+.nextbut {
+	background: url(../images/nextbut.png) no-repeat;
+	width: 61px;
+	height: 31px;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	border: 0;
+}
+/*提交申请材料*/
+.submitconent {
+	background: #f3fdfe;
+	width: 750px;
+	float: right;
+	padding: 8px 10px;
+	padding-left: 20px;
+	font-size: 12px
+}
+
+.submitconent img {
+	float: left;
+}
+
+.personbut01 {
+	background: url(../images/personbut01.jpg) no-repeat;
+	width: 104px;
+	height: 25px;
+	float: left;
+	line-height: 25px;
+	text-align: center;
+	margin-left: 40px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 100px;
+}
+
+.personbut02 {
+	background: url(../images/personbut02.jpg) no-repeat;
+	width: 134px;
+	height: 25px;
+	float: left;
+	line-height: 25px;
+	margin-left: 6px;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 10px
+}
+
+h2 {
+	background: url(../images/submitbg.jpg) repeat-x;
+	height: 34px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 34px;
+	text-indent: 10px;
+}
+
+h2 span {
+	float: right;
+	margin-top: 8px;
+}
+
+.comeare {
+	width: 740px;
+	border: #bbb7b7 solid 1px;
+	clear: both;
+	margin-top: 6px;
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+
+.inputsubmit {
+	width: 230px;
+	height: 24px;
+	border: #bbb7b7 solid 1px;
+	margin-top: 10px;
+}
+
+.adresssubmit {
+	width: 600px;
+	border: #bbb7b7 solid 1px;
+	height: 24px;
+	margin-top: 10px;
+}
+
+.selectsubmit {
+	width: 250px;
+	height: 24px;
+	border: #bbb7b7 solid 1px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 80px;
+	margin-right: 10px;
+	text-align: right;
+	line-height: 20px;
+	color: #333333
+}
+
+.width140 {
+	width: 326px;
+	margin-right: 140px;
+	display: inline;
+}
+
+.width200 {
+	width: 256px;
+	margin-right: 200px;
+	display: inline
+}
+
+.redfont {
+	color: #F00;
+	font-weight: bold;
+	line-height: 24px;
+	vertical-align: middle;
+	display: inline
+}
+
+.savesubmit {
+	width: 320px;
+	clear: both;
+	height: 30px;
+	text-align: center;
+	margin: 20px auto
+}
+
+.savesubmit img {
+	margin-right: 40px;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+.material {
+	width: 700px;
+	float: left;
+	clear: both
+}
+
+.tips {
+	width: 700px;
+	float: left;
+	clear: both;
+	color: #696868;
+	margin-top: 6px;
+}
+
+.materinput {
+	float: left;
+	margin-right: 6px;
+	margin-top: 12px
+}
+
+.materselect {
+	float: left;
+	margin-right: 6px;
+	margin-top: 12px
+}
+
+.texteare {
+	width: 620px;
+	margin-top: 10px;
+	border: #bbb7b7 solid 1px;
+}
+
+.buttondel {
+	background: url(../images/deleteicon.png) no-repeat;
+}
+/*填写信息的错识提示*/
+.reg_errortip {
+	line-height: 24px;
+	color: #F00;
+	margin-left: 130px;
+	float: left;
+	clear: both
+}
+
+.errortips {
+	width: auto;
+	clear: both;
+	overflow: hidden
+}
+
+.errorleft {
+	line-height: 24px;
+	color: #F00;
+	margin-left: 90px;
+	float: left
+}
+
+.errorright {
+	line-height: 24px;
+	color: #F00;
+	margin-left: 230px;
+	float: left;
+}
+
+/*网上答疑页*/
+.submitbut {
+	background: url(../images/submitbut.png) no-repeat;
+	width: 61px;
+	height: 29px;
+	cursor: pointer;
+	border: 0;
+	margin-right: 40px;
+	margin-top: 10px;
+}
+
+.undobut {
+	background: url(../images/undobut.png) no-repeat;
+	width: 61px;
+	height: 29px;
+	cursor: pointer;
+	border: 0;
+	margin-top: 10px;
+}
+/*查询结果*/
+.result {
+	width: 750px;
+	float: left
+}
+
+.resulttitle {
+	width: 750px;
+	height: 36px;
+	float: left;
+	line-height: 36px;
+	font-weight: bold
+}
+
+.table {
+	text-align: center; border;
+	border-collapse: collapse;
+	border: #5FA1D3 solid 1px
+}
+
+th,td {
+	border: 1px solid #5FA1D3;
+	line-height: 36px;
+}
+
+tbody .striped {
+	background: #D5E6F6
+}
+
+.resultitem {
+	background: #1A7AC4;
+	color: #FFF
+}
+
+.result a {
+	color: #000000;
+}
+
+.result a:hover {
+	text-decoration: underline
+}
+
+a.redcount:link {
+	color: #BD0B00;
+	text-decoration: none;
+}
+
+a.redcount:visited {
+	color: #BD0B00;
+	text-decoration: none;
+}
+
+a.redcount:hover {
+	text-decoration: underline;
+}
+
+.pagelist {
+	width: 380px;
+	margin: 8px auto
+}
+
+.pagelist a {
+	padding: 0px 6px;
+	float: left;
+	color: #000
+}
+
+/*律师注册页*/
+.layregbg {
+	padding-top: 6px;
+	background: url(../images/layregbg.jpg) repeat-x;
+	width: 100%;
+	height: 479px;
+}
+
+.layregtitle {
+	width: 843px;
+	margin: 0 auto;
+	background: #ffffff;
+	height: auto;
+	overflow: hidden
+}
+
+.layregname {
+	background: url(../images/layregtitle.jpg) no-repeat;
+	line-height: 42px;
+	font-weight: bold;
+	color: #1b78b5;
+	text-indent: 10px;
+	font-size: 14px;
+}
+
+.layregtitle ul li {
+	float: left;
+	clear: both;
+	margin-top: 14px;
+	margin-left: 200px;
+	width: 660px;
+}
+
+.layregnextbut {
+	background: url(../images/nextbut.png) no-repeat;
+	width: 61px;
+	height: 31px;
+	padding: 0;
+	margin-left: 200px;
+	cursor: pointer;
+	border: 0;
+}
+
+/*登录和注册总页面*/
+.logintotal {
+	width: 1000px;
+	margin: 0 auto
+}
+
+.logintotal img {
+	margin: 180px 10px 0px 10px;
+}
+
+/*右侧帮助按钮*/
+
+.backToTop { display:none;
+width:82px;
+line-height:1.2;
+padding-top: 30px;
+background: url(../images/helpbuttonbg.jpg) no-repeat;
+color:#fd8300; font-size:12px;
+text-align:center;
+position:fixed;
+_position:absolute;
+right:10px;
+bottom:465px;
+_bottom:"auto";
+cursor:pointer;
+font-weight:bold;
+left: 50%;
+height:78px;
+margin-left: 512px;}
+
+.backToTop a{color:#fd8300; }

@@ -1,0 +1,35 @@
+<ul>
+<#if page.hasPrevious>
+	<li class="prev"><a href="${ctx}/${channel.path}/index_1.html" title="首页">首页</a></li>
+	<li class="prev"><a href="${ctx}/${channel.path}/index_${page.previousPage}.html" title="上 一页">上一页</a></li>
+<#else>
+	<li class="prev"><span title="首页">首页</span></li>
+	<li class="prev"><span title="上一页">上一页</span></li>
+</#if>
+<#if page.hasNext>
+	<li class="next"><a href="${ctx}/${channel.path}/index_${page.nextPage}.html" title="下一页">下一页</a></li>
+	<li class="next"><a href="${ctx}/${channel.path}/index_${page.totalPage}.html" title="尾页">尾页</a></li>
+<#else>
+	<li class="next"><span title="下一页">下一页</span></li>
+	<li class="next"><span title="尾页">尾页</span></li>
+</#if>
+<li class="allpage">共${page.totalPage}页&nbsp;&nbsp;到第<input name="input" type="text" id="gotopages" value="${page.currentPage}"
+	onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" onkeyup="value=value.replace(/[^\d]/g,'') " />页 </li>
+<li class="ok"><a href="javascript:void(0);" title="确定"
+ 	onclick="goPage();">确定</a></li>
+</ul>
+<script type="text/javascript">
+    function goPage() {
+    	var pnum = $("#gotopages").val();
+    	
+    	if(pnum == ''){
+    		alert('请输入要跳转的页数！');
+    	}
+	    else if(pnum > ${page.totalPage} || pnum <= 0){
+	        alert('页号超出允许的范围！');
+	        $("#page").val("${page.currentPage}");
+	        return;
+	    }
+	    window.location.href='${ctx}/${channel.path}/index_'+pnum+'.html';
+	}
+</script>

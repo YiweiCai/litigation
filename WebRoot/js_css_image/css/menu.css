@@ -1,0 +1,46 @@
+ul, li, dl, dt, dd {list-style:none;margin: 0;padding: 0;}
+
+img {border:0;padding-right:5px;padding-bottom:2px}
+h3 {margin:0;padding:0;}
+.arrowlistmenu {width: 196px;background:#f0f8fb;height:100%; 
+}
+body, html {height:100%}
+.ahover{background:#0070cc; color:#ffffff;  width:196px; line-height:32px;}
+.arrowlistmenu .menuheader { /*CSS class for menu headers in general (expanding or not!)*/
+	font: 16px "微软雅黑";color:#3c3d3e;
+	background: url(../images/sys_navflod.jpg) no-repeat ;
+	text-transform: uppercase;padding: 5px 0 6px 50px; cursor: pointer; line-height:44px;
+	height:44px;
+	width:196px;
+}
+.arrowlistmenu .openheader {background: url(../images/sys_navopen.jpg) no-repeat;width:156px; padding: 5px 0 6px 40px;line-height:44px;}
+.arrowlistmenu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.arrowlistmenu ul li { *width:200px; overflow:hidden;}
+.arrowlistmenu ul li .opensubheader { }
+.arrowlistmenu ul li .closedsubheader {}
+.arrowlistmenu ul li a {
+	color:#3c3d3e;
+	display: block; padding-left:50px;text-decoration: none;font-size: 14px; font-family:"微软雅黑";line-height:32px;
+}
+.arrowlistmenu ul li a:visited {}
+.arrowlistmenu ul li a:hover {}
+.arrowlistmenu ul li a.subexpandable:hover {color:#0067B2;
+}
+.categoryitems {
+	border:1px #3D72A4 solid;
+	border-top:none;
+	background:#F0F8FB;
+	overflow:hidden
+}
+.arrowlistmenu ul li .as a {
+	color:#0065B3
+}
+.leftmar {
+	font-size:1px;
+	height:5px;
+	line-height:5px;
+}

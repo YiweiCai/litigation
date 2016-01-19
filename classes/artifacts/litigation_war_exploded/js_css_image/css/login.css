@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:"微软雅黑", "宋体";
+	font-size:12px;
+}
+ul, li, h1, h2, h3, a {
+	border:none;
+	padding:0;
+	margin:0;
+	list-style:none;
+	text-decoration:none;
+}
+img {
+	border:none;
+}
+.navbg {
+	background:url(../images/loginnav.jpg) repeat-x;
+	width:100%;
+	height:87px
+}
+.layout {
+	width:1000px;
+	margin:0 auto
+}
+.navbg img {
+	float:left
+}
+.nav {
+	float:right;
+	width:560px;
+	color:#484647;
+	margin-top:60px;
+}
+.nav a {
+	color:#484647;
+	margin-left:8px;
+	margin-right:8px;
+}
+.loginbg {
+	background:url(../images/loginbg.jpg) no-repeat;
+	background-size:100% 403px;
+	height:403px;
+}
+.logineare {
+	width:310px;
+	float:right;
+	padding-left:5px;
+	padding-right:5px;
+	margin-top:40px;
+ filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0, startColorStr=#265a89, endColorStr=#a0a9b2); /*IE 6 7 8*/
+	background: -ms-linear-gradient(top, #265a89, #a0a9b2);        /* IE 10 */
+	background:-moz-linear-gradient(top, #265a89, #a0a9b2);/*火狐*/
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#265a89), to(#a0a9b2));/*谷歌*/
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#265a89), to(#a0a9b2));      /* Safari 4-5, Chrome 1-9*/
+	background: -webkit-linear-gradient(top, #265a89, #a0a9b2);   /*Safari5.1 Chrome 10+*/
+	background: -o-linear-gradient(top, #265a89, #a0a9b2);  /*Opera 11.10+*/
+	height:280px;
+}
+.loginname {
+	width:300px;
+	margin:0 auto;
+	border-bottom:#1c4d78 solid 2px;
+	line-height:40px;
+	text-align:center;
+	color:#fff;
+	font-size:18px;
+}
+.inputstyle {
+	width:212px;
+	height:32px;
+	margin-top:20px;
+	padding-left:4px;
+	line-height:32px;
+}
+.label {
+	font-size:14px;
+	color:#FFF;
+	margin-left:10px;
+	margin-right:4px;
+	margin-bottom:4px;
+	width:50px;
+	display:inline-block;
+}
+.loginbut {
+	background:url(../images/loginbut.png) no-repeat;
+	width:286px;
+	height:50px;
+	border:0;
+	margin-top:20px;
+	margin-left:14px;
+	cursor:pointer
+}
+.reg {
+	width:300px;
+	text-align:center;
+	margin-top:20px;
+}
+.reg a {
+	color:#C00;
+	font-weight:bold
+}
+/*版权*/
+.copyrightbg {
+	background:url(../images/copyrightbg.jpg) repeat-x;
+	width:100%;
+	height:94px;
+	padding-top:10px;
+	margin-top:10px;
+}
+.copyright {
+	width:1000px;
+	margin:6px auto;
+	text-align:center;
+	font-size:12px;
+	line-height:20px;
+}
+
+/*律师登录页*/
+.layerloginbg {
+	background:url(../images/layerloginbg.jpg) no-repeat;
+	background-size:100% 403px;
+	height:403px;
+}
+/*代表登录页*/
+.daibiaologinbg {
+	background:url(../images/daibiaologin.jpg) no-repeat;
+	background-size:100% 403px;
+	height:403px;
+}
+
+.layerlogineare{background:url(../images/layerbgname.png) no-repeat; width:366px; height:286px;float:right;
+	padding-left:5px;
+	padding-right:5px;
+	margin-top:40px;}

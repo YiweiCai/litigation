@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<queryMapping>
+	<!-- 查询资源 -->
+	<query name="core.findResources">
+		<hql>
+		    <![CDATA[
+		        select resource from Resource as resource
+		        where 1=1
+	            <#if name??>
+		            and resource.name like:name
+		        </#if>
+		        <#if type??>
+		            and resource.type=:type
+		        </#if> 
+	            <#if category??>
+		            and resource.category=:category
+		        </#if> 
+		        <#if environment??>
+		            and resource.environment like:environment 
+		        </#if>
+		        <#if state??>
+		            and resource.state=:state 
+		        </#if>
+		        <#if userId??>
+		            and resource.createUser.id=:userId 
+		        </#if>
+		        <#if orderattr??>
+		            order by convert_gbk(${orderattr}) ${ordertype}
+		        <#else>
+		            order by resource.publishTime desc
+		        </#if>
+		    ]]>
+		</hql>
+	</query>
+</queryMapping>

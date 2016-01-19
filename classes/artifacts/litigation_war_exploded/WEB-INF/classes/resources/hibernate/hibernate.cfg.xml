@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+		<!-- system -->
+        <mapping class="com.core.system.entity.SysUser"/>
+        <mapping class="com.core.system.entity.SysDept"/>
+        <mapping class="com.core.system.entity.SysRole"/>
+        <mapping class="com.core.system.entity.SysUserRole"/>
+        <mapping class="com.core.system.entity.SysMenu"/>
+        <mapping class="com.core.system.entity.SysRoleMenu"/>
+        <mapping class="com.core.system.entity.SysDataDictionary"/>
+        <mapping class="com.core.system.entity.SysAccessLog"/>
+        <mapping class="com.core.system.entity.SysRuleSetting"/>
+        <mapping class="com.core.system.entity.SysMailServerSetting"/>
+        <mapping class="com.core.system.entity.UserLoginLog"/>
+        <mapping class="com.core.system.entity.QuerySqlHql"/>
+        
+        <!-- upload file -->
+        <mapping class="com.core.upload.entity.UploadFile"/>
+        
+         <!-- oa -->
+         <mapping class="com.core.oa.msg.entity.OaIntenalMessage"/>
+         <mapping class="com.core.oa.work.entity.OaProject"/>
+         <mapping class="com.core.oa.work.entity.OaProjectSchedule"/>
+         <mapping class="com.core.oa.work.entity.OaProjectParticipant"/>
+         <mapping class="com.core.oa.work.entity.OaWorkLog"/>
+         <mapping class="com.core.oa.msg.entity.OaMessageBoard"/>
+         <mapping class="com.core.oa.article.entity.OaArticle"/>
+         <mapping class="com.core.oa.article.entity.OaArticleComment"/>
+         <mapping class="com.core.oa.article.entity.OaArticleCommentReplay"/>
+         
+         <!-- cms -->
+         <mapping class="com.core.cms.entity.CmsArticle"/>
+         <mapping class="com.core.cms.entity.CmsArticleAttr"/>
+         <mapping class="com.core.cms.entity.CmsChannel"/>
+         <mapping class="com.core.cms.entity.CmsTemplet"/>
+         <mapping class="com.core.cms.entity.CmsComment"/>
+         <mapping class="com.core.cms.entity.CmsCommentReplay"/>
+         <mapping class="com.core.cms.entity.CmsMember"/>
+         <mapping class="com.core.cms.entity.CmsMemberGroup"/>
+         <mapping class="com.core.cms.entity.CmsRoleChannel"/>
+       
+         <!-- workflow -->
+         <mapping class="com.core.workflow.common.entity.WfExecuteSetting"/>
+         <mapping class="com.core.workflow.leave.entity.WfLeave"/>
+         <mapping class="com.core.workflow.leave.entity.WfLeaveAudit"/>
+         
+         <!-- 资源 -->
+         <mapping class="com.core.resource.entity.Resource"/>
+         <mapping class="com.core.resource.entity.ResourceDownloadHistory"/>
+         
+         
+         <!-- 诉讼网 -->
+         <mapping class="com.lawsuit.wsla.entity.LsYast"/>
+         <mapping class="com.lawsuit.wsla.entity.LsLaxx"/>
+         <mapping class="com.lawsuit.wsla.entity.LsXf"/>
+         <mapping class="com.lawsuit.wsla.entity.LsHistory"/>
+         <mapping class="com.lawsuit.wsla.entity.LawyerOnline"/>
+         <mapping class="com.lawsuit.wsla.entity.CourtOpening"/>
+         <mapping class="com.lawsuit.wsla.entity.CourtOpenInfo"/>
+     
+         <!-- jbpm -->
+         <mapping resource="jbpm.repository.hbm.xml" />
+	     <mapping resource="jbpm.execution.hbm.xml" />
+	     <mapping resource="jbpm.history.hbm.xml" />
+	     <mapping resource="jbpm.task.hbm.xml" />
+	     <mapping resource="jbpm.identity.hbm.xml" />
+	     
+	     <!-- 开庭信息  -->
+		 <mapping class="com.lawsuit.wsla.entity.CourtOpenInfo"/>
+		 <mapping class="com.lawsuit.wsla.entity.UploadVideo"/>
+</session-factory>
+</hibernate-configuration>

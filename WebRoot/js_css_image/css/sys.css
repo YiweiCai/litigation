@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+.sysbanner{ background:url(../images/sys_topbg.jpg) repeat-x; height:111px; color:#ffffff}
+.sysbanner a{ color:#ffffff}
+.sysbanner img{ margin-left:100px; float:left;}
+.sysuser{float:right; margin-right:10px; margin-top:60px;}
+.sysquit{float:right; margin-top:60px; width:240px}

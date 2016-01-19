@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 郑州法院 -->
+	<package name="lawsuit" extends="default" namespace="/zzfy/lawsuit">
+	     
+	    <!-- 用户管理 -->
+	    <action name="laxx_*" class="LaxxAction" method="{1}">
+	    	 <result name="list">/WEB-INF/jsp/lawsuit/wsla/listLaxx.jsp</result>
+	    	 <result name="myCase">/WEB-INF/jsp/lawsuit/wsla/myCase.jsp</result>
+	         <result name="add">/WEB-INF/jsp/lawsuit/wsla/addLaxx.jsp</result>
+	    	<result name="shenhe">/WEB-INF/jsp/lawsuit/wsla/shenheLaxx.jsp</result>
+	    	<result name="caseProceed">/WEB-INF/jsp/lawsuit/wsla/caseProceedList.jsp</result>
+	    	<result name="searchLaxx">/WEB-INF/jsp/lawsuit/wsla/searchLaxx.jsp</result>
+	   		<result name="addYyly">/WEB-INF/jsp/lawsuit/wsla/addYyly.jsp</result>
+	   		<result name="detail">/WEB-INF/jsp/lawsuit/wsla/LaxxDetail.jsp</result>
+	   		<result name="beiGao">/WEB-INF/jsp/lawsuit/wsla/addBeiGao.jsp</result>
+	   		<result name="SSQQ">/WEB-INF/jsp/lawsuit/wsla/addSSQQ.jsp</result>
+	   		<result name="laxx4">/WEB-INF/jsp/lawsuit/wsla/addLaxx4.jsp</result>
+	   		<result name="addLaxx">/WEB-INF/jsp/lawsuit/wsla/addLaxx.jsp</result>
+	   		<result name="weiTiJiao">/WEB-INF/jsp/lawsuit/wsla/weiTiJiao.jsp</result>
+	    </action>
+	    
+	     <action name="xf_*" class="XfAction" method="{1}">
+	         <result name="add">/WEB-INF/jsp/lawsuit/wsxf/addXf.jsp</result>
+	         <result name="list">/WEB-INF/jsp/lawsuit/wsxf/listXf.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/wsxf/flistXf.jsp</result>
+	         <result name="replyXf">/WEB-INF/jsp/lawsuit/wsxf/replyXf.jsp</result>
+	         <result name="detail">/WEB-INF/jsp/lawsuit/wsxf/detailXf.jsp</result>
+	         <result name="fdetail">/WEB-INF/jsp/lawsuit/wsxf/fdetailXf.jsp</result>
+	    </action>
+	    <action name="lo_*" class="LawyerOnlineAction" method="{1}">
+	         <result name="add">/WEB-INF/jsp/lawsuit/lo/contactlayer.jsp</result>
+	         <result name="list">/WEB-INF/jsp/lawsuit/lo/list.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/lo/contactlayerlist.jsp</result>
+	         <result name="edit">/WEB-INF/jsp/lawsuit/lo/edit.jsp</result>
+	         <result name="view">/WEB-INF/jsp/lawsuit/lo/view.jsp</result>
+	    </action>
+	    <action name="co_*" class="CourtOpeningAction" method="{1}">
+	         <result name="list">/WEB-INF/jsp/lawsuit/co/list.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/co/flist.jsp</result>
+	         <result name="edit">/WEB-INF/jsp/lawsuit/co/edit.jsp</result>
+	         <result name="view">/WEB-INF/jsp/lawsuit/co/view.jsp</result>
+	         <result name="uploadVideo">/WEB-INF/jsp/lawsuit/co/uploadVideo.jsp</result>
+	    </action>
+	    <action name="uv_*" class="UploadVideoAction" method="{1}">
+	    	<result name="list">/WEB-INF/jsp/lawsuit/co/listVideo.jsp</result>
+	    	<result name="flist">/WEB-INF/jsp/lawsuit/co/flistVideo.jsp</result>
+	    	<result name="edit">/WEB-INF/jsp/lawsuit/co/editVideo.jsp</result>
+	    	<result name="view">/WEB-INF/jsp/lawsuit/co/viewVideo.jsp</result>
+	    </action>
+	    <!-- Cai -->
+	    <!-- S 开庭公告信息 -->
+	    	<!-- 添加开庭公告 -->
+	    	<action name="courtOpenInfo" class="com.lawsuit.wsla.action.CourtOpenInfoAction" method="executeMethod">
+	    	 	<result name="success">/WEB-INF/jsp/index.jsp</result>
+	    	</action>
+	    	<action name="courtOpenInfoList"  class="com.lawsuit.wsla.action.CourtOpenInfoAction" method="list">
+	    		<result name="success">/front/jsp/cms/courtOpenInfoList.jsp</result>
+	    	</action>
+	    <!-- E 开庭公告信息 -->
+	</package>
+	<!-- 新郑法院 -->
+	<package name="xzlawsuit" extends="default" namespace="/xzfy/lawsuit">
+	     
+	    <!-- 用户管理 -->
+	    <action name="laxx_*" class="LaxxAction" method="{1}">
+	    	 <result name="list">/WEB-INF/jsp/lawsuit/wsla/listLaxx.jsp</result>
+	    	 <result name="myCase">/WEB-INF/jsp/lawsuit/wsla/myCase.jsp</result>
+	         <result name="add">/WEB-INF/jsp/lawsuit/wsla/addLaxx.jsp</result>
+	    	<result name="shenhe">/WEB-INF/jsp/lawsuit/wsla/shenheLaxx.jsp</result>
+	    	<result name="caseProceed">/WEB-INF/jsp/lawsuit/wsla/caseProceedList.jsp</result>
+	    	<result name="searchLaxx">/WEB-INF/jsp/lawsuit/wsla/searchLaxx.jsp</result>
+	   		<result name="addYyly">/WEB-INF/jsp/lawsuit/wsla/addYyly.jsp</result>
+	   		<result name="detail">/WEB-INF/jsp/lawsuit/wsla/LaxxDetail.jsp</result>
+	   		<result name="beiGao">/WEB-INF/jsp/lawsuit/wsla/addBeiGao.jsp</result>
+	   		<result name="SSQQ">/WEB-INF/jsp/lawsuit/wsla/addSSQQ.jsp</result>
+	   		<result name="laxx4">/WEB-INF/jsp/lawsuit/wsla/addLaxx4.jsp</result>
+	   		<result name="addLaxx">/WEB-INF/jsp/lawsuit/wsla/addLaxx.jsp</result>
+	   		<result name="weiTiJiao">/WEB-INF/jsp/lawsuit/wsla/weiTiJiao.jsp</result>
+	    </action>
+	    
+	     <action name="xf_*" class="XfAction" method="{1}">
+	         <result name="add">/WEB-INF/jsp/lawsuit/wsxf/addXf.jsp</result>
+	         <result name="list">/WEB-INF/jsp/lawsuit/wsxf/listXf.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/wsxf/flistXf.jsp</result>
+	         <result name="replyXf">/WEB-INF/jsp/lawsuit/wsxf/replyXf.jsp</result>
+	         <result name="detail">/WEB-INF/jsp/lawsuit/wsxf/detailXf.jsp</result>
+	         <result name="fdetail">/WEB-INF/jsp/lawsuit/wsxf/fdetailXf.jsp</result>
+	    </action>
+	    <action name="lo_*" class="LawyerOnlineAction" method="{1}">
+	         <result name="add">/WEB-INF/jsp/lawsuit/lo/contactlayer.jsp</result>
+	         <result name="list">/WEB-INF/jsp/lawsuit/lo/list.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/lo/contactlayerlist.jsp</result>
+	         <result name="edit">/WEB-INF/jsp/lawsuit/lo/edit.jsp</result>
+	         <result name="view">/WEB-INF/jsp/lawsuit/lo/view.jsp</result>
+	    </action>
+	    <action name="co_*" class="CourtOpeningAction" method="{1}">
+	         <result name="list">/WEB-INF/jsp/lawsuit/co/list.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/co/flist.jsp</result>
+	         <result name="edit">/WEB-INF/jsp/lawsuit/co/edit.jsp</result>
+	         <result name="view">/WEB-INF/jsp/lawsuit/co/view.jsp</result>
+	         <result name="uploadVideo">/WEB-INF/jsp/lawsuit/co/uploadVideo.jsp</result>
+	    </action>
+	    <action name="uv_*" class="UploadVideoAction" method="{1}">
+	    	<result name="list">/WEB-INF/jsp/lawsuit/co/listVideo.jsp</result>
+	    	<result name="flist">/WEB-INF/jsp/lawsuit/co/flistVideo.jsp</result>
+	    	<result name="edit">/WEB-INF/jsp/lawsuit/co/editVideo.jsp</result>
+	    	<result name="view">/WEB-INF/jsp/lawsuit/co/viewVideo.jsp</result>
+	    </action>
+	    <!-- Cai -->
+	    <!-- S 开庭公告信息 -->
+	    	<!-- 添加开庭公告 -->
+	    	<action name="courtOpenInfo" class="com.lawsuit.wsla.action.CourtOpenInfoAction" method="executeMethod">
+	    	 	<result name="success">/WEB-INF/jsp/index.jsp</result>
+	    	</action>
+	    	<action name="courtOpenInfoList"  class="com.lawsuit.wsla.action.CourtOpenInfoAction" method="list">
+	    		<result name="success">/front/jsp/cms/courtOpenInfoList.jsp</result>
+	    	</action>
+	    <!-- E 开庭公告信息 -->
+	</package>
+	<!-- 荥阳法院 -->
+	<package name="xylawsuit" extends="default" namespace="/xyfy/lawsuit">
+	     
+	    <!-- 用户管理 -->
+	    <action name="laxx_*" class="LaxxAction" method="{1}">
+	    	 <result name="list">/WEB-INF/jsp/lawsuit/wsla/listLaxx.jsp</result>
+	    	 <result name="myCase">/WEB-INF/jsp/lawsuit/wsla/myCase.jsp</result>
+	         <result name="add">/WEB-INF/jsp/lawsuit/wsla/addLaxx.jsp</result>
+	    	<result name="shenhe">/WEB-INF/jsp/lawsuit/wsla/shenheLaxx.jsp</result>
+	    	<result name="caseProceed">/WEB-INF/jsp/lawsuit/wsla/caseProceedList.jsp</result>
+	    	<result name="searchLaxx">/WEB-INF/jsp/lawsuit/wsla/searchLaxx.jsp</result>
+	   		<result name="addYyly">/WEB-INF/jsp/lawsuit/wsla/addYyly.jsp</result>
+	   		<result name="detail">/WEB-INF/jsp/lawsuit/wsla/LaxxDetail.jsp</result>
+	   		<result name="beiGao">/WEB-INF/jsp/lawsuit/wsla/addBeiGao.jsp</result>
+	   		<result name="SSQQ">/WEB-INF/jsp/lawsuit/wsla/addSSQQ.jsp</result>
+	   		<result name="laxx4">/WEB-INF/jsp/lawsuit/wsla/addLaxx4.jsp</result>
+	   		<result name="addLaxx">/WEB-INF/jsp/lawsuit/wsla/addLaxx.jsp</result>
+	   		<result name="weiTiJiao">/WEB-INF/jsp/lawsuit/wsla/weiTiJiao.jsp</result>
+	    </action>
+	    
+	     <action name="xf_*" class="XfAction" method="{1}">
+	         <result name="add">/WEB-INF/jsp/lawsuit/wsxf/addXf.jsp</result>
+	         <result name="list">/WEB-INF/jsp/lawsuit/wsxf/listXf.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/wsxf/flistXf.jsp</result>
+	         <result name="replyXf">/WEB-INF/jsp/lawsuit/wsxf/replyXf.jsp</result>
+	         <result name="detail">/WEB-INF/jsp/lawsuit/wsxf/detailXf.jsp</result>
+	         <result name="fdetail">/WEB-INF/jsp/lawsuit/wsxf/fdetailXf.jsp</result>
+	    </action>
+	    <action name="lo_*" class="LawyerOnlineAction" method="{1}">
+	         <result name="add">/WEB-INF/jsp/lawsuit/lo/contactlayer.jsp</result>
+	         <result name="list">/WEB-INF/jsp/lawsuit/lo/list.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/lo/contactlayerlist.jsp</result>
+	         <result name="edit">/WEB-INF/jsp/lawsuit/lo/edit.jsp</result>
+	         <result name="view">/WEB-INF/jsp/lawsuit/lo/view.jsp</result>
+	    </action>
+	    <action name="co_*" class="CourtOpeningAction" method="{1}">
+	         <result name="list">/WEB-INF/jsp/lawsuit/co/list.jsp</result>
+	         <result name="flist">/WEB-INF/jsp/lawsuit/co/flist.jsp</result>
+	         <result name="edit">/WEB-INF/jsp/lawsuit/co/edit.jsp</result>
+	         <result name="view">/WEB-INF/jsp/lawsuit/co/view.jsp</result>
+	         <result name="uploadVideo">/WEB-INF/jsp/lawsuit/co/uploadVideo.jsp</result>
+	    </action>
+	    <action name="uv_*" class="UploadVideoAction" method="{1}">
+	    	<result name="list">/WEB-INF/jsp/lawsuit/co/listVideo.jsp</result>
+	    	<result name="flist">/WEB-INF/jsp/lawsuit/co/flistVideo.jsp</result>
+	    	<result name="edit">/WEB-INF/jsp/lawsuit/co/editVideo.jsp</result>
+	    	<result name="view">/WEB-INF/jsp/lawsuit/co/viewVideo.jsp</result>
+	    </action>
+	    <!-- Cai -->
+	    <!-- S 开庭公告信息 -->
+	    	<!-- 添加开庭公告 -->
+	    	<action name="courtOpenInfo" class="com.lawsuit.wsla.action.CourtOpenInfoAction" method="executeMethod">
+	    	 	<result name="success">/WEB-INF/jsp/index.jsp</result>
+	    	</action>
+	    	<action name="courtOpenInfoList"  class="com.lawsuit.wsla.action.CourtOpenInfoAction" method="list">
+	    		<result name="success">/front/jsp/cms/courtOpenInfoList.jsp</result>
+	    	</action>
+	    <!-- E 开庭公告信息 -->
+	</package>
+	
+</struts>
