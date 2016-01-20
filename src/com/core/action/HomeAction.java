@@ -131,9 +131,9 @@ public class HomeAction extends ActionSupport {
         findArticleTypicalCases(requestNameSpace);
         findArticleJudge(requestNameSpace);
         findCourt(requestNameSpace);
-        if(requestNameSpace.indexOf("fy")==-1){
-        	Servlets.getSession().putValue("requestNameSpace", "zzfy");
-        }
+//        if(requestNameSpace.indexOf("fy")==-1){
+//        	Servlets.getSession().putValue("requestNameSpace", "zzfy");
+//        }
         return "index";
     }
     /**
