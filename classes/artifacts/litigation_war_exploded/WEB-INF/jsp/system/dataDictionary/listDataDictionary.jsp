@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head>
@@ -9,7 +7,7 @@
 	<script type="text/javascript">
 		var list=true;
 		var deleteAndRemoveTreeNode=true;
-		var deleteurl = "${ctx }/system/datadictionary_delete.do";
+		var deleteurl = "${ctx4ej }/system/datadictionary_delete.do";
 		$(function() {
 			
 		});
@@ -23,16 +21,16 @@
 			<td>
 				<div align="center" id="uldiv">
 					<ul>
-						<li><a href="${ctx }/system/datadictionary_update.do?id=${id }"><span><my:i18n zhText="当前参数信息" enText="Current Param Info"/></span></a></li>
-						<li id="current"><a href="${ctx }/system/datadictionary_list.do?id=${id }"><span><my:i18n zhText="下级各项列表" enText="Sub Param List"/></span></a></li>
-						<li><a href="${ctx }/system/datadictionary_add.do?id=${id }"><span><my:i18n zhText="新增下级参数" enText="Add A New Param"/></span></a></li>
+						<li><a href="${ctx4ej }/system/datadictionary_update.do?id=${id }"><span><my:i18n zhText="当前参数信息" enText="Current Param Info"/></span></a></li>
+						<li id="current"><a href="${ctx4ej }/system/datadictionary_list.do?id=${id }"><span><my:i18n zhText="下级各项列表" enText="Sub Param List"/></span></a></li>
+						<li><a href="${ctx4ej }/system/datadictionary_add.do?id=${id }"><span><my:i18n zhText="新增下级参数" enText="Add A New Param"/></span></a></li>
 					</ul>
 				</div>
 			 </td>
 			</tr>
 		</table>
   </div>
-		   <form action="${ctx }/system/datadictionary_list.do" method="post" id="scoreForm">
+		   <form action="${ctx4ej }/system/datadictionary_list.do" method="post" id="scoreForm">
 		          <input type="hidden" name="id" value="${id }"/>
 		           <table class="ltable" width="100%">
 			            <thead class="ltablehead">

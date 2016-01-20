@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head>
@@ -9,7 +7,7 @@
 	<script type="text/javascript">
 		var list=true;
 		var deleteAndRemoveTreeNode=true;
-		var deleteurl = "${ctx }/system/menu_delete.do";
+		var deleteurl = "${ctx44ej }/system/menu_delete.do";
 		$(function() {
 			
 		});
@@ -24,16 +22,16 @@
 						 <div align="center" id="uldiv">
 						    <input type="hidden" name="parentId" id="parentId" value="${id }">
 							<ul >
-								<li><a href="${ctx }/system/menu_update.do?id=${id }"><span><my:i18n zhText="菜单信息" enText="Menu Info"/></span></a></li>
-								<li id="current"><a href="${ctx }/system/menu_list.do?id=${id }"><span><my:i18n zhText="下级菜单列表" enText="Sub Menu List"/></span></a></li>
-								<li><a href="${ctx }/system/menu_add.do?id=${id }"><span><my:i18n zhText="新增下级菜单" enText="Add A New Menu"/></span></a></li>
+								<li><a href="${ctx4ej }/system/menu_update.do?id=${id }"><span><my:i18n zhText="菜单信息" enText="Menu Info"/></span></a></li>
+								<li id="current"><a href="${ctx4ej }/system/menu_list.do?id=${id }"><span><my:i18n zhText="下级菜单列表" enText="Sub Menu List"/></span></a></li>
+								<li><a href="${ctx4ej }/system/menu_add.do?id=${id }"><span><my:i18n zhText="新增下级菜单" enText="Add A New Menu"/></span></a></li>
 							</ul>
 						    </div>
 						</td>
 					</tr>
 				</table>
 		</div>
-		    <form action="${ctx }/system/menu_list.do" method="post" id="menuForm">
+		    <form action="${ctx4ej }/system/menu_list.do" method="post" id="menuForm">
 		      <input type="hidden" name="id" value="${id }"/>
 			  <table class="ltable" width="100%">
 			        <thead class="ltablehead">
@@ -57,7 +55,7 @@
 								<td align="center"><input type="checkbox" name="ids"  value="${menu.id}"/></td>
 								<td align="center"><my:rowNum page="${page}" rowIndex="${status.index}"/></td>
 								<td>
-								   <a href="${ctx }/system/menu_update.do?id=${menu.id}" name="menuDetail"><my:i18n zhText="${menu.menuName}" enText="${menu.enMenuName}"/></a>
+								   <a href="${ctx4ej }/system/menu_update.do?id=${menu.id}" name="menuDetail"><my:i18n zhText="${menu.menuName}" enText="${menu.enMenuName}"/></a>
 								</td>
 								<td>${menu.menuPath}</td>
 								<%--<td align="center">${menu.remark}</td> --%>

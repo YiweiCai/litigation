@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="<%=request.getContextPath() %>"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head>
@@ -26,9 +24,9 @@
 			<td>
 				<div align="center" id="uldiv">
 					<ul>
-						<li id="current"><a href="${ctx }/system/datadictionary_update.do?id=${id }"><span><my:i18n zhText="当前参数信息" enText="Current Param Info"/></span></a></li>
-						<li><a href="${ctx }/system/datadictionary_list.do?id=${id }"><span><my:i18n zhText="下级各项列表" enText="Sub Param List"/></span></a></li>
-						<li><a href="${ctx }/system/datadictionary_add.do?id=${id }"><span><my:i18n zhText="新增下级参数" enText="Add A New Param"/></span></a></li>
+						<li id="current"><a href="${ctx4ej }/system/datadictionary_update.do?id=${id }"><span><my:i18n zhText="当前参数信息" enText="Current Param Info"/></span></a></li>
+						<li><a href="${ctx4ej }/system/datadictionary_list.do?id=${id }"><span><my:i18n zhText="下级各项列表" enText="Sub Param List"/></span></a></li>
+						<li><a href="${ctx4ej }/system/datadictionary_add.do?id=${id }"><span><my:i18n zhText="新增下级参数" enText="Add A New Param"/></span></a></li>
 					</ul>
 				</div>
 			 </td>
