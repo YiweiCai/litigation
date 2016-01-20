@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="ctx" value="<%=request.getContextPath() %>"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head>
@@ -21,10 +19,10 @@
 			<td>
 				<div align="center" id="uldiv">
 					  <ul>
-						<li><a href="${ctx}/system/systemSetting_addRuleSetting.do?ruleType=login"><span><my:i18n zhText="登录规则设置" enText="Login Rule Setting"/></span></a></li>
-						<li id="current"><a href="${ctx}/system/systemSetting_addRuleSetting.do?ruleType=loginLog"><span><my:i18n zhText="登录日志设置" enText="Login Log Setting"/></span></a></li>
-						<li><a href="${ctx}/system/systemSetting_addRuleSetting.do?ruleType=accessLog"><span><my:i18n zhText="系统访问日志设置" enText="System Access Log Setting"/></span></a></li>
-						<li><a href="${ctx}/system/systemSetting_addMailServerSetting.do"><span><my:i18n zhText="邮箱服务器设置" enText="Mail Server Setting"/></span></a></li>
+						<li><a href="${ctx4ej}/system/systemSetting_addRuleSetting.do?ruleType=login"><span><my:i18n zhText="登录规则设置" enText="Login Rule Setting"/></span></a></li>
+						<li id="current"><a href="${ctx4ej}/system/systemSetting_addRuleSetting.do?ruleType=loginLog"><span><my:i18n zhText="登录日志设置" enText="Login Log Setting"/></span></a></li>
+						<li><a href="${ctx4ej}/system/systemSetting_addRuleSetting.do?ruleType=accessLog"><span><my:i18n zhText="系统访问日志设置" enText="System Access Log Setting"/></span></a></li>
+						<li><a href="${ctx4ej}/system/systemSetting_addMailServerSetting.do"><span><my:i18n zhText="邮箱服务器设置" enText="Mail Server Setting"/></span></a></li>
 					  </ul>
 				</div>
 			 </td>
@@ -41,7 +39,7 @@
   </div>
   
   <div id="result" align="center" style="color: red"></div>
-		  <form id="loginRuleSettingForm" action="{ctx}/system/systemSetting_saveRuleSetting.do" method="post">
+		  <form id="loginRuleSettingForm" action="${ctx4ej}/system/systemSetting_saveRuleSetting.do" method="post">
 		  <input type="hidden" name="ruleSetting.id" id="id" value="${ruleSetting.id }">
 		   <input type="hidden" name="ruleSetting.ruleType" value="loginLog">
 		  <table width="100%" class="ftable">

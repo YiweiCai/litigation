@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head lhgdialog="true">
@@ -9,7 +7,7 @@
    <script type="text/javascript">
 		var list=true;
 		var deleteAndRemoveTreeNode=true;
-		var deleteurl = "${ctx }/cms/channel_delete.do";
+		var deleteurl = "${ctx4ej }/cms/channel_delete.do";
 		$(function() {
 			//$("a[name='deptDetail']").colorbox({width:"90%", height:"90%", iframe:true});
 		});
@@ -23,9 +21,9 @@
 			<td>
 				<div align="center" id="uldiv">
 					<ul>
-						<li><a href="${ctx }/cms/channel_update.do?id=${id }"><span>本栏目信息</span></a></li>
-						<li id="current"><a href="${ctx }/cms/channel_list.do?id=${id }"><span>下级栏目列表</span></a></li>
-						<li><a href="${ctx }/cms/channel_add.do?id=${id }"><span>新增下级栏目</span></a></li>
+						<li><a href="${ctx4ej }/cms/channel_update.do?id=${id }"><span>本栏目信息</span></a></li>
+						<li id="current"><a href="${ctx4ej }/cms/channel_list.do?id=${id }"><span>下级栏目列表</span></a></li>
+						<li><a href="${ctx4ej }/cms/channel_add.do?id=${id }"><span>新增下级栏目</span></a></li>
 					</ul>
 				</div>
 			</td>

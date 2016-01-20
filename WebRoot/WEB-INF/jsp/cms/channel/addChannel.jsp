@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="<%=request.getContextPath() %>"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head lhgdialog="true" tree3="true">
@@ -35,9 +33,9 @@
 			<td>
 				<div align="center" id="uldiv">
 					<ul>
-						<li><a href="${ctx }/cms/channel_update.do?id=${id }&parentId=${id }"><span>本栏目信息</span></a></li>
-						<li><a href="${ctx }/cms/channel_list.do?id=${id }"><span>下级栏目列表</span></a></li>
-						<li id="current"><a href="${ctx }/cms/channel_add.do?id=${id }"><span>新增下级栏目</span></a></li>
+						<li><a href="${ctx4ej }/cms/channel_update.do?id=${id }&parentId=${id }"><span>本栏目信息</span></a></li>
+						<li><a href="${ctx4ej }/cms/channel_list.do?id=${id }"><span>下级栏目列表</span></a></li>
+						<li id="current"><a href="${ctx4ej }/cms/channel_add.do?id=${id }"><span>新增下级栏目</span></a></li>
 					</ul>
 				</div>
 			</td>
@@ -45,7 +43,7 @@
 	</table>
 </div>
   <div id="result" align="center" style="color: red;padding-top: 10px"></div>
-<form method="post" action="${ctx }/cms/channel_save.do" id="channelForm">
+<form method="post" action="${ctx4ej }/cms/channel_save.do" id="channelForm">
     <input type="hidden" name="parentId" value="${parentId}">
      <table width="100%" class="ftable"id="ftable">
 		<tr>

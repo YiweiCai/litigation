@@ -124,13 +124,13 @@ public class HomeAction extends ActionSupport {
 //        // 查询资源分类统计信息
 //        findCategories();
         findArticleNotice(requestNameSpace);
-        findArticleProcedure();
-        findArticleJudgment();
-        findArticleParole();
+        findArticleProcedure(requestNameSpace);
+        findArticleJudgment(requestNameSpace);
+        findArticleParole(requestNameSpace);
         
-        findArticleTypicalCases();
-        findArticleJudge();
-        findCourt();
+        findArticleTypicalCases(requestNameSpace);
+        findArticleJudge(requestNameSpace);
+        findCourt(requestNameSpace);
         if(requestNameSpace.indexOf("fy")==-1){
         	Servlets.getSession().putValue("requestNameSpace", "zzfy");
         }
@@ -156,9 +156,9 @@ public class HomeAction extends ActionSupport {
      * @author xcl
      */
     @SuppressWarnings("unchecked")
-    private void findArticleProcedure() throws Exception {
+    private void findArticleProcedure(String requestNameSpace) throws Exception {
         page.setPageSize(8);
-        String hql = "from CmsArticle article where article.isReleased='Y' and article.cmsChannel.id='402881f7508813af0150887e28e60003' order by article.createTime desc";
+        String hql = "from CmsArticle article where article.isReleased='Y' and article.organization='"+requestNameSpace+"' and article.organization='"+requestNameSpace+"' and article.cmsChannel.id='402881f7508813af0150887e28e60003' order by article.createTime desc";
         articleProcedure = articleService.findPage(page, new HqlBuilder(hql)).getList();
     }
     /**
@@ -168,9 +168,9 @@ public class HomeAction extends ActionSupport {
      * @author xcl
      */
     @SuppressWarnings("unchecked")
-    private void findArticleJudgment() throws Exception {
+    private void findArticleJudgment(String requestNameSpace) throws Exception {
         page.setPageSize(5);
-        String hql = "from CmsArticle article where article.isReleased='Y' and article.cmsChannel.id='4028e3484d676c2a014d6784a4990000' order by article.createTime desc";
+        String hql = "from CmsArticle article where article.isReleased='Y' and article.organization='"+requestNameSpace+"' and article.cmsChannel.id='4028e3484d676c2a014d6784a4990000' order by article.createTime desc";
         articleJudgment = articleService.findPage(page, new HqlBuilder(hql)).getList();
     }
     
@@ -181,9 +181,9 @@ public class HomeAction extends ActionSupport {
      * @author xcl
      */
     @SuppressWarnings("unchecked")
-    private void findArticleParole() throws Exception {
+    private void findArticleParole(String requestNameSpace) throws Exception {
         page.setPageSize(5);
-        String hql = "from CmsArticle article where article.isReleased='Y' and article.cmsChannel.id='402881f7508813af0150887fd0700004' order by article.createTime desc";
+        String hql = "from CmsArticle article where article.isReleased='Y' and article.organization='"+requestNameSpace+"' and article.cmsChannel.id='402881f7508813af0150887fd0700004' order by article.createTime desc";
         articleParole = articleService.findPage(page, new HqlBuilder(hql)).getList();
     }
     
@@ -194,9 +194,9 @@ public class HomeAction extends ActionSupport {
      * @author xcl
      */
     @SuppressWarnings("unchecked")
-    private void findArticleTypicalCases() throws Exception {
+    private void findArticleTypicalCases(String requestNameSpace) throws Exception {
         page.setPageSize(5);
-        String hql = "from CmsArticle article where article.isReleased='Y' and article.cmsChannel.id='402881f7508813af0150887c99020002' order by article.createTime desc";
+        String hql = "from CmsArticle article where article.isReleased='Y' and article.organization='"+requestNameSpace+"' and article.cmsChannel.id='402881f7508813af0150887c99020002' order by article.createTime desc";
         articleTypicalCases = articleService.findPage(page, new HqlBuilder(hql)).getList();
     }
     
@@ -207,9 +207,9 @@ public class HomeAction extends ActionSupport {
      * @author xcl
      */
     @SuppressWarnings("unchecked")
-    private void findArticleJudge() throws Exception {
+    private void findArticleJudge(String requestNameSpace) throws Exception {
         page.setPageSize(5);
-        String hql = "from CmsArticle article where article.isReleased='Y' and article.cmsChannel.id='402881fb5093521c0150936401890007' order by article.createTime desc";
+        String hql = "from CmsArticle article where article.isReleased='Y' and article.organization='"+requestNameSpace+"' and article.cmsChannel.id='402881fb5093521c0150936401890007' order by article.createTime desc";
         articleJudge = articleService.findPage(page, new HqlBuilder(hql)).getList();
     }
     /**
@@ -219,9 +219,9 @@ public class HomeAction extends ActionSupport {
      * @author xcl
      */
     @SuppressWarnings("unchecked")
-    private void findCourt() throws Exception {
+    private void findCourt(String requestNameSpace) throws Exception {
         page.setPageSize(4);
-        String hql = "from CourtOpening co order by co.courtName asc";
+        String hql = "from CourtOpening co where co.organization='"+requestNameSpace+"' order by co.courtName asc";
         courtOpening = this.courtOpeningService.findPage(page, new HqlBuilder(hql)).getList();
     }
     

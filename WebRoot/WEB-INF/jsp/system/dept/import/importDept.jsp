@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="<%=request.getContextPath() %>"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head multiFile="true">
@@ -25,7 +23,7 @@
 	<div class="clear"></div>
 </div>
 <div id="result" align="center" style="color: red;"></div>
-    <form method="post" action="${ctx }/system/dept_importExcel.do" id="form" enctype="multipart/form-data">
+    <form method="post" action="${ctx4ej }/system/dept_importExcel.do" id="form" enctype="multipart/form-data">
      <table width="100%" class="ftable">
 	  <tr>
 		  <th width="20%">excel文件：</th>
@@ -33,7 +31,7 @@
 	  </tr>
 	  <tr>
 		  <th><my:i18n zhText="部门" enText="Deptment"/>模板：</th>
-		  <td><a href="${ctx }/system/dept_download.do">点击下载</a></td>
+		  <td><a href="${ctx4ej }/system/dept_download.do">点击下载</a></td>
 	  </tr>
 	  <tr>
 		<td colspan="2" class="ftablebutton">
