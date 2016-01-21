@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
+import com.core.base.web.Servlets;
 import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,9 +35,10 @@ public class CourtDao {
 		List<CourtOpenInfo> list = this.getSession().createQuery(hql).list();
 		return list.size()>0?list:null;
 	}
-	public Page findPage(Page page) {
+	public Page findPage(Page page,String requestNameSpace) {
 		// TODO Auto-generated method stub
-		String hql = "from CourtOpenInfo coi ORDER BY coi.startTime ASC";
+
+		String hql = "from CourtOpenInfo coi where coi.organization ='"+requestNameSpace+"' ORDER BY coi.startTime ASC";
 		HqlBuilder hqlBuilder = new HqlBuilder(hql);
 		try {
 			return baseHibernateDao.findPage(page, hqlBuilder);

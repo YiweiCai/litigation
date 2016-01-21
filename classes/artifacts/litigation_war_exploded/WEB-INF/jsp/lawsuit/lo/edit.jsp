@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head fck="true" datePicker="true" multiFile="true">
 	<script type="text/javascript">
 		var addordetail = true;
-		var tolisturl = "${ctx }/lawsuit/lo_list.do?type=${type}";
-		var updateurl="${ctx }/lawsuit/laxx_update.do";
+		var tolisturl = "${ctx4ej }/lawsuit/lo_list.do?type=${type}";
+		var updateurl="${ctx4ej }/lawsuit/laxx_update.do";
 		$(function() {
 			$("#replyWay").change(function(){
 			
@@ -41,7 +39,7 @@
 	<div class="clear"></div>
 </div>
   <div id="result" align="center" style="color: red;padding-top: 10px"></div>
-<form method="post" action="${ctx }/lawsuit/lo_save.do" id="articleForm" >
+<form method="post" action="${ctx4ej }/lawsuit/lo_save.do" id="articleForm" >
      <input type="hidden" name="loid" value="${lo.id}"/>
      <input type="hidden" name="lo.status" value="1"/>
      <table width="100%" class="ftable">

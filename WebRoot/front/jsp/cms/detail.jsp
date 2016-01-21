@@ -1,14 +1,10 @@
-
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><my:view value="InternetTitle" pvalue="xitong"/></title>
+<%@include file="/common/title.jsp"%>
 <script type="text/javascript" src="${ctx }/js_css_image/js/jquery/jquery-1.8.0.min.js"></script>
 <script type="text/javascript">
 			$(document).ready(function(){
@@ -45,8 +41,8 @@
 
 <body>
 
-<form id="formSearch" method="post" action="${ctx }/cms/article_search.htm">
-   <%@ include file="/front/jsp/include/head.jsp" %>		
+<form id="formSearch" method="post" action="${ctx4ej }/cms/article_search.htm">
+   <%@ include file="/front/jsp/include/head.jsp" %>
 	    
 <div class="layout">
   <div class="leftnav">
@@ -56,9 +52,9 @@
 	<div class="leftnavline"></div>
 	<c:choose>
 			
-			<c:when test="${channel.isDynamicUrl=='1'&&! empty channel.dynamicUrl}"><li id="${channel.id}"><a initClick="${channel.id}" href="#" onclick="changeDiv('${ctx}${channel.dynamicUrl}','${channel.id}')">${channel.channelName }</a></li></c:when>
+			<c:when test="${channel.isDynamicUrl=='1'&&! empty channel.dynamicUrl}"><li id="${channel.id}"><a initClick="${channel.id}" href="#" onclick="changeDiv('${ctx4ej}${channel.dynamicUrl}','${channel.id}')">${channel.channelName }</a></li></c:when>
 			<c:when test="${channel.isDynamicUrl=='2'&&! empty channel.dynamicUrl}"><li id="${channel.id}"><a href="${channel.dynamicUrl}" target="_">${channel.channelName }</a></li></c:when>
-			<c:otherwise><li  id="${channel.id}"><a href="${ctx}/cms/article_flist.htm?channelId=${channel.id}">${channel.channelName }</a></li></c:otherwise>
+			<c:otherwise><li  id="${channel.id}"><a href="${ctx4ej}/cms/article_flist.htm?channelId=${channel.id}">${channel.channelName }</a></li></c:otherwise>
 	</c:choose>
 </c:if>
 <%-- 二级栏目 --%>
@@ -67,9 +63,9 @@
 <c:forEach  items="${channel.cmsChannel.cmsChannels}" var="item" varStatus="status">
 		<c:choose>
 			
-			<c:when test="${item.isDynamicUrl=='1'&&! empty item.dynamicUrl}"><li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${ctx}${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li></c:when>
+			<c:when test="${item.isDynamicUrl=='1'&&! empty item.dynamicUrl}"><li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${ctx4ej}${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li></c:when>
 			<c:when test="${item.isDynamicUrl=='2'&&! empty item.dynamicUrl}"><li  id="${item.id}"><a href="${item.dynamicUrl}" target="_">${item.channelName }</a></li></c:when>
-			<c:otherwise><li  id="${item.id}"><a href="${ctx}/cms/article_flist.htm?channelId=${item.id}">${item.channelName }</a></li></c:otherwise>
+			<c:otherwise><li  id="${item.id}"><a href="${ctx4ej}/cms/article_flist.htm?channelId=${item.id}">${item.channelName }</a></li></c:otherwise>
 		</c:choose>
 	</c:forEach>
 </c:if>
@@ -102,7 +98,7 @@
 		            		附件：
 		            		<c:forEach items="${uploadFileList}" var="upfile">
 						        <span id="${upfile.id}span">
-						            <a href="${ctx}/cms/article_download.do?id=${id}&uploadFileId=${upfile.id}" title="下载" target="_blank">${upfile.uploadFileName }[${upfile.uploadFileSize}]</a>
+						            <a href="${ctx4ej}/cms/article_download.do?id=${id}&uploadFileId=${upfile.id}" title="下载" target="_blank">${upfile.uploadFileName }[${upfile.uploadFileSize}]</a>
 						            <br/>
 						         </span>
 						    </c:forEach>

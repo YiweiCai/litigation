@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@include file="/common/taglibs.jsp"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,7 +19,7 @@
 	
 	});
 	function backUrl(){
-		window.location.href=<c:choose><c:when test="${empty url}">'${ctx }/lawsuit/lo_flist.do?type=${type}'</c:when><c:otherwise>unescape('${url}')</c:otherwise></c:choose>;
+		window.location.href=<c:choose><c:when test="${empty url}">'${ctx4ej }/lawsuit/lo_flist.do?type=${type}'</c:when><c:otherwise>unescape('${url}')</c:otherwise></c:choose>;
 	  }
 
 </script>
@@ -30,7 +27,7 @@
 </my:head>
 
 <body>
-<form id="frm" name="frm" action="${ctx }/lawsuit/lo_save.do" method="post">
+<form id="frm" name="frm" action="${ctx4ej }/lawsuit/lo_save.do" method="post">
 	<input type="hidden" name="lo.type" value="${type }" />
   <div class="layercontent">
   <c:choose>

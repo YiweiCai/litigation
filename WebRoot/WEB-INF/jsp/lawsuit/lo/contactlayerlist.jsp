@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@include file="/common/taglibs.jsp"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,7 +8,7 @@
 <title></title>
 <link href="${ctx }/js_css_image/css/common.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
- 	var listurl = "${ctx }/lawsuit/lo_flist.htm";
+ 	var listurl = "${ctx4ej }/lawsuit/lo_flist.htm";
 	// 获取页面跳转参数
 	function getParams(){
 		return "type=${type}";
@@ -21,9 +17,9 @@
 </head>
 
 <body>
-<form id="frm" name="frm" action="${ctx }/lawsuit/lo_flist.htm?type=${type}" method="post">
+<form id="frm" name="frm" action="${ctx4ej }/lawsuit/lo_flist.htm?type=${type}" method="post">
 
-<div class="guidetitlebg"><a href="${ctx }/lawsuit/lo_add.htm?type=${type}" class="questiobut">我要提问</a>问答列表</div>
+<div class="guidetitlebg"><a href="${ctx4ej }/lawsuit/lo_add.htm?type=${type}" class="questiobut">我要提问</a>问答列表</div>
 
 <div class="consulteare">
 <c:forEach var="lo" items="${page.list }" varStatus="status">

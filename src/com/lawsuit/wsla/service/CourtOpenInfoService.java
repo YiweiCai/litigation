@@ -176,8 +176,8 @@ public class CourtOpenInfoService {
 	public List<CourtOpenInfo> getCourtOpenInfoList(){
 		return courtDao.getCourtOpenInfoList();
 	}
-	public Page findPage(Page page){
-		return courtDao.findPage(page);
+	public Page findPage(Page page,String requestNameSpace){
+		return courtDao.findPage(page,requestNameSpace);
 		
 	}
 }

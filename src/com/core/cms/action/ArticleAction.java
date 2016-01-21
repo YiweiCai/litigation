@@ -122,7 +122,6 @@ public class ArticleAction extends BaseUploadFileAction<CmsArticle>{
 
             paramMap.put("channelId", channelId);
             paramMap.put("isReleased", "Y");
-
             // 单页栏目
             if ("single".equals(channel.getChannelType())) {
                 page.setPageSize(1);

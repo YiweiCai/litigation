@@ -38,7 +38,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 @Controller("com.lawsuit.wsla.action.CourtOpenInfoAction")
 public class CourtOpenInfoAction extends ActionSupport{
-	
+
 	@Autowired
 	private BaseHibernateDao baseHibernateDao;
 	@Autowired
@@ -70,8 +70,8 @@ public class CourtOpenInfoAction extends ActionSupport{
 
 	@LoginValidation(validate = YN.N)
 	public String list(){
-		page = courtOpenInfoService.findPage(page);
-		System.out.println(page.getList().size());
+		String requestNameSpace = (String) Servlets.getSession().getAttribute("requestNameSpace");
+		page = courtOpenInfoService.findPage(page,requestNameSpace);
 //		courtOpenInfoList = courtOpenInfoService.getCourtOpenInfoList();
 		return SUCCESS;
 	}

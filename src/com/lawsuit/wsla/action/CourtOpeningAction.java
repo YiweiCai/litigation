@@ -2,13 +2,11 @@ package com.lawsuit.wsla.action;
 
 import java.util.List;
 
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import com.core.base.annotation.LoginValidation;
-import com.core.base.annotation.Validation;
 import com.core.base.constants.Constants;
 import com.core.base.constants.enums.YN;
 import com.core.base.dao.utils.builder.HqlBuilder;
@@ -20,15 +18,12 @@ import com.core.base.web.Sessions;
 import com.core.base.web.render.Renders;
 import com.core.system.entity.SysUser;
 import com.lawsuit.wsla.entity.CourtOpening;
-import com.lawsuit.wsla.entity.LawyerOnline;
 import com.lawsuit.wsla.service.CourtOpeningService;
-import com.lawsuit.wsla.service.LawyerOnlineService;
-import com.opensymphony.xwork2.ActionSupport;
 
 @Controller("CourtOpeningAction")
 @Scope("prototype")
-public class CourtOpeningAction extends ActionSupport {
-
+public class CourtOpeningAction{
+	private String requestNameSpace = (String) Servlets.getSession().getAttribute("requestNameSpace");
 	/**
      * 
      */
@@ -74,9 +69,8 @@ public class CourtOpeningAction extends ActionSupport {
 	}
 
 	public String list() throws Exception {
-
-		page = this.courtOpeningService.findPage(page, new HqlBuilder(
-				"from CourtOpening lo "));
+//		page = this.courtOpeningService.findPage(page, new HqlBuilder("from CourtOpening lo"));
+		page = this.courtOpeningService.findPage(page, new HqlBuilder("from CourtOpening lo where lo.organization='"+requestNameSpace+"'"));
 
 		return "list";
 
@@ -91,10 +85,9 @@ public class CourtOpeningAction extends ActionSupport {
 	@LoginValidation(validate = YN.N)
 	public String flist() throws Exception {
 		page.setPageSize(9);
-
-		page = this.courtOpeningService.findPage(page, new HqlBuilder(
-				"from CourtOpening lo "));
-
+//		page = this.courtOpeningService.findPage(page, new HqlBuilder("from CourtOpening lo "));
+		String requestNameSpace = (String) Servlets.getSession().getAttribute("requestNameSpace");
+		page = this.courtOpeningService.findPage(page, new HqlBuilder("from CourtOpening lo where lo.organization='"+requestNameSpace+"'"));
 		return "flist";
 
 	}
