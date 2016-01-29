@@ -65,10 +65,18 @@
 <c:if test="${channel.cmsChannel.id != '1' }">
 <li class="blue">${channel.cmsChannel.channelName }</li>
 <div class="leftnavline"></div>
+	<!-- 下面c:foreach 中的 第一个 c:choose 中的c:when 里面的fn:contains 函数 判断意义是：判断循环遍历的菜单是否是本身的前台页面，主要是针对案件查询菜单 -->
 <c:forEach  items="${channel.cmsChannel.cmsChannels}" var="item" varStatus="status">
 		<c:choose>
-			
-			<c:when test="${(item.isDynamicUrl=='1'||item.isDynamicUrl=='3')&&! empty item.dynamicUrl}"><li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${ctx4ej}${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li></c:when>
+
+			<c:when test="${(item.isDynamicUrl=='1'||item.isDynamicUrl=='3')&&! empty item.dynamicUrl}">
+				<c:if test="${fn:contains(item.dynamicUrl, 'front')==true}" >
+					<li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li>
+				</c:if>
+				<c:if test="${fn:contains(item.dynamicUrl, 'front')==false}" >
+				<li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${ctx4ej}${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li>
+				</c:if>
+			</c:when>
 			<c:when test="${item.isDynamicUrl=='2'&&! empty item.dynamicUrl}"><li  id="${item.id}"><a href="${item.dynamicUrl}" target="_">${item.channelName }</a></li></c:when>
 			<c:otherwise><li  id="${item.id}"><a href="${ctx4ej}/cms/article_flist.htm?channelId=${item.id}">${item.channelName }</a></li></c:otherwise>
 		</c:choose>

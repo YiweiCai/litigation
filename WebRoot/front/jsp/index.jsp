@@ -194,14 +194,19 @@
 <div class="layout">
   <div class="videotitle"><span><a href="${ctx4ej }/cms/article_flist.htm?channelId=402881fb50ae10770150ae1f23ee0008">更多</a></span>庭审直播</div>
   <div class="courtbg">
-    <ul>
-    <c:forEach items="${courtOpening }" var="co">
-    	<a href="${ctx4ej }/lawsuit/co_view.htm?coid=${co.id}"><li>
-    	${co.courtName }：直播</li></a>
-    </c:forEach>
-      
-      
-    </ul>
+    <c:if test="${requestNameSpace eq 'zzfy'}">
+        <ul>
+        <c:forEach items="${courtOpening }" var="co">
+            <a href="${ctx4ej }/lawsuit/co_view.htm?coid=${co.id}"><li>
+            ${co.courtName }：直播</li></a>
+        </c:forEach>
+        </ul>
+    </c:if>
+    <c:if test="${requestNameSpace ne 'zzfy'}">
+
+        <a href="${ctx4ej}/lawsuit/co_view.htm?coid="><img src="/js_css_image/images/livead.jpg"></a>
+
+    </c:if>
   </div>
 </div>
 <div class="layout">
