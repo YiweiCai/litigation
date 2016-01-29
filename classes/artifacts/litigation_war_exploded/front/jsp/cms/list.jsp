@@ -85,7 +85,7 @@
 
 </div>
 <div style="display: none;" class="aside" id="iframeDiv">
-<iframe src="" id="iframepage" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="768" ></iframe>
+<iframe src="" id="iframepage" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="800" ></iframe>
 </div>
 <div class="aside" id="aside">
 <form id="formSearch" method="post" action="${ctx4ej }/cms/article_search.htm">
@@ -163,6 +163,6 @@
 
 
 
-<%@include file="/common/static.jsp" %>
+<%@include file="/common/commonfooter.jsp" %>
 </body>
 </html>

@@ -63,6 +63,10 @@ public class ArticleServiceImpl extends BaseServiceImpl<CmsArticle> implements A
 		   if(StringUtils.isNotEmpty(paramMap.get("isReleased"))){
 			   hqlBuilder.append(" and article.isReleased=:isReleased").setParam("isReleased", paramMap.get("isReleased"));
 		   }
+		//
+			if(StringUtils.isNotEmpty(paramMap.get("organization"))){
+				hqlBuilder.append(" and article.organization=:organization").setParam("organization", paramMap.get("organization"));
+			}
 		   if(StringUtils.isNotEmpty(paramMap.get("contentImg"))){
 			   hqlBuilder.append(" and article.contentImg is not null and article.contentImg !=''");
 		   }

@@ -22,6 +22,7 @@
             </div>
         </div>
     </c:when>
+
     <c:when test="${requestNameSpace eq 'xyfy'}">
         <div class="copyrightbg">
             <div class="copyright">服务中心咨询电话：0371-64601832 &nbsp;&nbsp;
@@ -41,6 +42,7 @@
             </div>
         </div>
     </c:when>
+
     <c:otherwise>
         <div class="copyrightbg">
             <div class="copyright">服务中心咨询电话：0371-69520000&nbsp;&nbsp;

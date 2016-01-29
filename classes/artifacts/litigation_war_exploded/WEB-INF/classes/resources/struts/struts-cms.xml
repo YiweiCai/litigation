@@ -3,7 +3,8 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<!-- 郑州cms -->
+	<!--cms-->
+	<!-- 郑州中院 -->
 	<package name="cms" extends="default" namespace="/zzfy/cms">
 	     <!-- cms频道模型 -->
 	     <action name="channelModel_*" class="cms.ChannelModelAction" method="{1}">
@@ -44,7 +45,7 @@
 	        <result name="detail">/front/jsp/cms/detail.jsp</result>
 	     </action>
 	</package>
-	<!-- 新郑cms -->
+	<!-- 新郑市 -->
 	<package name="xzcms" extends="default" namespace="/xzfy/cms">
 	     <!-- cms频道模型 -->
 	     <action name="channelModel_*" class="cms.ChannelModelAction" method="{1}">
@@ -85,7 +86,7 @@
 	        <result name="detail">/front/jsp/cms/detail.jsp</result>
 	     </action>
 	</package>
-	<!-- 荥阳cms -->
+	<!-- 荥阳市 -->
 	<package name="xycms" extends="default" namespace="/xyfy/cms">
 	     <!-- cms频道模型 -->
 	     <action name="channelModel_*" class="cms.ChannelModelAction" method="{1}">
@@ -126,6 +127,18 @@
 	        <result name="detail">/front/jsp/cms/detail.jsp</result>
 	     </action>
 	</package>
-	
-	
+	<!-- 巩义市 -->
+	<!-- 登封市 -->
+	<!-- 新密市 -->
+	<!-- 中牟县 -->
+	<!-- 航空港区 -->
+	<!-- 金水区 -->
+	<!-- 二七区 -->
+	<!-- 中原区 -->
+	<!-- 管城区 -->
+	<!-- 惠济区 -->
+	<!-- 上街区 -->
+	<!-- 高新区 -->
+
+
 </struts>

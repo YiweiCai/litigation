@@ -158,6 +158,6 @@
     </form>
   </div>
 </div>
-<%@include file="/common/static.jsp" %>
+<%@include file="/common/commonfooter.jsp" %>
 </body>
 </html>

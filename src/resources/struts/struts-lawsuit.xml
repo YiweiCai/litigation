@@ -3,7 +3,8 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<!-- 郑州法院 -->
+	<!--lawsuit-->
+	<!-- 郑州中院 -->
 	<package name="lawsuit" extends="default" namespace="/zzfy/lawsuit">
 	     
 	    <!-- 用户管理 -->
@@ -62,7 +63,7 @@
 	    	</action>
 	    <!-- E 开庭公告信息 -->
 	</package>
-	<!-- 新郑法院 -->
+	<!-- 新郑市 -->
 	<package name="xzlawsuit" extends="default" namespace="/xzfy/lawsuit">
 	     
 	    <!-- 用户管理 -->
@@ -121,7 +122,7 @@
 	    	</action>
 	    <!-- E 开庭公告信息 -->
 	</package>
-	<!-- 荥阳法院 -->
+	<!-- 荥阳市 -->
 	<package name="xylawsuit" extends="default" namespace="/xyfy/lawsuit">
 	     
 	    <!-- 用户管理 -->
@@ -180,5 +181,16 @@
 	    	</action>
 	    <!-- E 开庭公告信息 -->
 	</package>
-	
+	<!-- 巩义市 -->
+	<!-- 登封市 -->
+	<!-- 新密市 -->
+	<!-- 中牟县 -->
+	<!-- 航空港区 -->
+	<!-- 金水区 -->
+	<!-- 二七区 -->
+	<!-- 中原区 -->
+	<!-- 管城区 -->
+	<!-- 惠济区 -->
+	<!-- 上街区 -->
+	<!-- 高新区 -->
 </struts>

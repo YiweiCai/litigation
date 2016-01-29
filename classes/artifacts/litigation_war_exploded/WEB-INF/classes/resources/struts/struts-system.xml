@@ -3,6 +3,7 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+
     <!-- 郑州中院用户登录 -->
 	<package name="userLogin" extends="struts-default" namespace="/zzfy/login">
 		<action name="login_*" class="system.action.LoginAction" method="{1}">
@@ -374,6 +375,19 @@
 	        <result name="list">/WEB-INF/jsp/system/queryHqlSql/list.jsp</result>
 	     </action>
 	</package>
+
+	<!-- 巩义市 -->
+	<!-- 登封市 -->
+	<!-- 新密市 -->
+	<!-- 中牟县 -->
+	<!-- 航空港区 -->
+	<!-- 金水区 -->
+	<!-- 二七区 -->
+	<!-- 中原区 -->
+	<!-- 管城区 -->
+	<!-- 惠济区 -->
+	<!-- 上街区 -->
+	<!-- 高新区 -->
 
 
 	

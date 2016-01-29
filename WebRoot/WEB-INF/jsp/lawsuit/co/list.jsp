@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <my:head lhgdialog="true" tree3="true">
     <style type="text/css">.ztree li a:hover {text-decoration:none;}</style>
      <script type="text/javascript">
 		
-        var addnewurl = "${ctx}/lawsuit/co_add.do";
-		var deleteurl = "${ctx }/system/user_delete.do";
+        var addnewurl = "${ctx4ej}/lawsuit/co_add.do";
+		var deleteurl = "${ctx4ej }/system/user_delete.do";
 		$(function() {
 			//alert($.i18n("lang"));
 			//alert($.i18n("helloParam",["12222","233333"]));
@@ -18,16 +16,16 @@
 				$(this).html(t.substring(0,t.length-1));
 			});
 			$("#exportExcel").click(function(){
-				$("#userForm").attr("action","${ctx }/system/userreport_exportExcel.do").submit();
+				$("#userForm").attr("action","${ctx4ej }/system/userreport_exportExcel.do").submit();
 			});
 			$("#exportWord").click(function(){
-				$("#userForm").attr("action","${ctx }/system/userreport_exportWord.do").submit();
+				$("#userForm").attr("action","${ctx4ej }/system/userreport_exportWord.do").submit();
 			});
 			$("#exportPdf").click(function(){
-				$("#userForm").attr("action","${ctx }/system/userreport_exportPdf.do").submit();
+				$("#userForm").attr("action","${ctx4ej }/system/userreport_exportPdf.do").submit();
 			});
 			$("#searchButton").click(function(){
-				$("#userForm").attr("action","${ctx }/lawsuit/lo_list.do").submit();
+				$("#userForm").attr("action","${ctx4ej }/lawsuit/lo_list.do").submit();
 			});
 			
 			
@@ -55,7 +53,7 @@
 			</div>
 			<div class="clear"></div>
 			</div>
-		   <form action="${ctx }/lawsuit/lo_list.do" method="post" id="userForm">
+		   <form action="${ctx4ej }/lawsuit/co_list.do" method="post" id="userForm">
 			   <!-- <div class="psearchhead">
 					案件类型：<my:select pvalue="ajlx" name="lsLaxx.ajlx"  firstoption="--"/>&nbsp;&nbsp;
 		状态：<my:select pvalue="state" name="lsLaxx.state"  firstoption="--"/>
@@ -91,7 +89,7 @@
 									<td align="center">${co.openingUrl } </td>
 									<td align="center">${co.createTime} </td>
 									<td align="center">
-									<a href="${ctx }/lawsuit/co_edit.do?coid=${co.id}"><my:i18n zhText="编辑" enText="edit"/></a>
+									<a href="${ctx4ej }/lawsuit/co_edit.do?coid=${co.id}"><my:i18n zhText="编辑" enText="edit"/></a>
 									
 									   <%--<a href="javascript:" title="resetpassword" onclick="resetPassword('<my:i18n zhText="${user.userName}" enText="${user.enUserName}"/>','${user.id}')"><my:i18n zhText="重置密码" enText="Reset Password"/></a>	 --%>
 									</td>

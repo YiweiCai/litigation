@@ -1,12 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="<%=request.getContextPath() %>"/>
+<%@ include file="/common/taglibs.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><my:view value="InternetTitle" pvalue="xitong"/></title>
+<%@include file="/common/title.jsp"%>
 <link href="${ctx }/js_css_image/css/common.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
@@ -15,21 +13,11 @@
 <%@ include file="/front/jsp/include/head.jsp" %>
 <div class="address"><div class="guidetitlebg">法院地址</div>
 <div class="route">
-新郑市人民法院<br />
-电  话: 0371-62671216<br />
-地址：河南省新郑市金城路中段259号<br />
-邮  编：451150
-
-
+    <%@include file="/common/commonaddress.jsp"%>
 </div>
+
 <div class="map">  <div style="width:550px;height:400px;border:#ccc solid 1px;" id="dituContent"></div>
 </div>
-
-
-
-
-
-
 </div>
 
 
@@ -38,8 +26,9 @@
 
 
 
-<%@include file="/common/static.jsp" %>
+<%@include file="/common/commonfooter.jsp" %>
 <script type="text/javascript">
+    var local = "${requestNameSpace}";
     //创建和初始化地图函数：
     function initMap(){
         createMap();//创建地图
@@ -51,7 +40,14 @@
     //创建地图函数：
     function createMap(){
         var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(113.751601,34.391558);//定义一个中心点坐标
+        if(local == "zzfy"){
+            var point = new BMap.Point(113.752927,34.770656);//定义一个中心点坐标
+        }else if(local == "xzfy"){
+            var point = new BMap.Point(113.751601,34.391558);//定义一个中心点坐标
+        }else if(local == "xyfy"){
+            var point = new BMap.Point(113.437651,34.788349);//定义一个中心点坐标
+        }
+
         map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
     }
@@ -78,8 +74,14 @@
     }
     
     //标注点数组
-    var markerArr = [{title:"新郑市人民法院",content:"",point:"113.751601|34.391558",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
-		 ];
+    if(local == "xzfy"){
+        var markerArr = [{title:"新郑市人民法院",content:"",point:"113.751601|34.391558",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}];
+    }else if(local == "zzfy"){
+        var markerArr = [{title:"郑州市中级人民法院",content:"",point:"113.754921|34.770597",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}];
+    }else if(local == "xyfy"){
+        var markerArr = [{title:"荥阳市人民法院",content:"",point:"113.437651|34.788349",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}];
+    }
+
     //创建marker
     function addMarker(){
         for(var i=0;i<markerArr.length;i++){

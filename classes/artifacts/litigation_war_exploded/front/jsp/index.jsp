@@ -58,9 +58,15 @@
 <div class="layout">
   <div class="wearth">
     <!-- <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=7" style="background:url(${ctx }/js_css_image/images/wearthbg.jpg) no-repeat; padding-top:6px"  width="283" height="100" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>-->
-  <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=82" width="250" height="160" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-    
-    <a href="${ctx }/front/jsp/myCenter/hnzzweb3d.jsp" target="_">
+      <c:if test="${requestNameSpace eq 'zzfy'}">
+            <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=7" style="background:url(/js_css_image/images/wearthbgsm.jpg) no-repeat; padding-top:6px"  width="283" height="100" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            <a href="${ctx}/front/jsp/myCenter/hnzzweb3d.jsp" target="_">
+                <div class="loginbg"></div>
+      </c:if>
+      <c:if test="${requestNameSpace ne 'zzfy'}">
+          <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=82" width="250" height="160" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+      </c:if>
+
     <!-- <div class="loginbg">
   <!--  <c:choose>
     	<c:when test="${empty user}">
@@ -138,7 +144,7 @@
 <h5></h5>
 <div class="layeare">
 <ul><a href="<c:choose><c:when test="${empty user }">${ctx4ej }/myCenter/totallogin.htm</c:when><c:otherwise>${ctx4ej }/cms/article_flist.htm?channelId=402881fb509d319901509dffd66e0007</c:otherwise></c:choose>"><li  class="buttonbg"><img src="${ctx }/js_css_image/images/layicon.jpg"/>提供免费法律咨询、律师在线咨询、法律法规查询、点对点法律咨询解答、在线案件委托。[详细]</li></a>
-<li><a href="${ctx4ej }/front/jsp/myCenter/contextLaw.jsp"><img src="${ctx }/js_css_image/images/layerenter.jpg"/></a></li>
+<li><a href="${ctx4}/front/jsp/myCenter/contextLaw.jsp"><img src="${ctx }/js_css_image/images/layerenter.jpg"/></a></li>
 </ul>
 </div>
 <div class="grayline"></div>
@@ -282,11 +288,14 @@
   </div>
 </div>
 <div class="linkbg">
-<div class="link"><a href="http://hnfy.chinacourt.org/index.shtml" target="blank">河南法院</a> <a href="http://www.henandaily.cn/" target="blank">河南人民日报</a> <a href="http://www.hncourt.gov.cn/" target="blank">河南人民法院</a></div>
-
-
+<div class="link">
+    <a href="http://hnfy.chinacourt.org/index.shtml" target="blank">河南法院</a>
+    <a href="http://www.henandaily.cn/" target="blank">河南人民日报</a>
+    <a href="http://www.hncourt.gov.cn/" target="blank">河南人民法院</a>
 </div>
-<%@include file="/common/static.jsp"%>
+
+<%@include file="/common/commonfooter.jsp"%>
+</div>
 </body>
 </html>
 

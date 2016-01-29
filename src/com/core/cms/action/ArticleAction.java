@@ -56,7 +56,7 @@ public class ArticleAction extends BaseUploadFileAction<CmsArticle>{
 	private List<CmsChannel> channelList;
 	private List<CmsArticleAttr> articleAttrList;
 	private Page page = new Page(Constants.PAGE_SIZE);
-	
+
 	//private String fckContent;
 	//private String fckContentPath;
     //查询条件
@@ -122,6 +122,9 @@ public class ArticleAction extends BaseUploadFileAction<CmsArticle>{
 
             paramMap.put("channelId", channelId);
             paramMap.put("isReleased", "Y");
+			//获取对应子站的信息
+			String organization = (String) Servlets.getSession().getAttribute("requestNameSpace");
+			paramMap.put("organization",organization);
             // 单页栏目
             if ("single".equals(channel.getChannelType())) {
                 page.setPageSize(1);
@@ -158,6 +161,7 @@ public class ArticleAction extends BaseUploadFileAction<CmsArticle>{
     	JsonResult jr = null;
 //        if (articleId == 0) {
         if (StringUtils.isBlank(articleId)) {
+			article.setOrganization(Sessions.getSysUser().getOrganization());
             this.articleService.save(article);
             jr = Renders.SAVE_SUCCESS;
         } else {
@@ -206,6 +210,9 @@ public class ArticleAction extends BaseUploadFileAction<CmsArticle>{
 				paramMap.put("title", title);
 				paramMap.put("isReleased", isReleased);
 			}
+			//获取对应子站的信息
+			String organization = (String) Servlets.getSession().getAttribute("requestNameSpace");
+			paramMap.put("organization",organization);
 			page = articleService.findPage(page,paramMap);
 			channel = channelService.get(channelId);
 		} catch (Exception e) {
@@ -240,7 +247,9 @@ public class ArticleAction extends BaseUploadFileAction<CmsArticle>{
             Map<String,String> paramMap = new HashMap<String, String>();
             paramMap.put("title", title);
             paramMap.put("isReleased", "Y");
-            
+			//获取对应子站的信息
+			String organization = (String) Servlets.getSession().getAttribute("requestNameSpace");
+			paramMap.put("organization",organization);
             page = articleService.findPage(page,paramMap);
         } catch (Exception e) {
             
@@ -479,5 +488,5 @@ public class ArticleAction extends BaseUploadFileAction<CmsArticle>{
 	public SysUser getUser() {
 		return user;
 	}
-	
+
 }

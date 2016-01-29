@@ -5,6 +5,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="litigation" />
+          <element id="extracted-dir" path="$PROJECT_DIR$/WebRoot/WEB-INF/lib/web/servlet-api.jar" path-in-jar="/" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="module" name="antlr-2.7.7.jar" module-name="litigation" />
@@ -18,7 +19,6 @@
           <element id="library" level="module" name="commons-collections-3.2.1.jar" module-name="litigation" />
           <element id="library" level="module" name="commons-digester3-3.2.jar" module-name="litigation" />
           <element id="library" level="module" name="commons-fileupload-1.2.2.jar" module-name="litigation" />
-          <element id="library" level="module" name="commons-io-2.2-sources.jar" module-name="litigation" />
           <element id="library" level="module" name="commons-io-2.2.jar" module-name="litigation" />
           <element id="library" level="module" name="commons-lang-2.5.jar" module-name="litigation" />
           <element id="library" level="module" name="commons-lang3-3.1.jar" module-name="litigation" />
@@ -97,8 +97,12 @@
           <element id="library" level="module" name="xbean-2.6.0.jar" module-name="litigation" />
           <element id="library" level="module" name="xstream-1.2.2.jar" module-name="litigation" />
           <element id="library" level="project" name="lib" />
+          <element id="library" level="module" name="servlet-api.jar" module-name="litigation" />
+          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/lib/commons/json.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/lib/commons/ueditor-1.1.2.jar" />
         </element>
       </element>
+      <element id="library" level="module" name="commons-io-2.2-sources.jar" module-name="litigation" />
       <element id="javaee-facet-resources" facet="litigation/web/Web" />
     </root>
   </artifact>

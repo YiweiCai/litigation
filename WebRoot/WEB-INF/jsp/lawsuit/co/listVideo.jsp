@@ -51,7 +51,7 @@
 			});
 		});
 		$("#add").click(function(){
-			location.href="${ctx }/lawsuit/co_uploadVideo.do";
+			location.href="${ctx4ej }/lawsuit/co_uploadVideo.do";
 		});
 
 	})
@@ -67,10 +67,10 @@
 				<input type="button" class="button orange" id="add" value="新增" /> <input
 					type="button" class="button orange" id="searchButton" value="查询" />
 
-			</div>
+			</div>w
 			<div class="clear"></div>
 		</div>
-		<form action="${ctx4ej}/lawsuit/lo_list.do" method="post"
+		<form action="${ctx4ej}/lawsuit/uv_listVideo.htm" method="post"
 			id="userForm">
 			<!-- <div class="psearchhead">
 					案件类型：<select   name="lsLaxx.ajlx"><option value="">--</option><option value="0">刑事案件</option><option value="1">民事案件</option><option value="2">行政案件</option></select>&nbsp;&nbsp;
@@ -105,7 +105,7 @@
 									<td align="center">${uv.videoSite } </td>
 									<td align="center">${uv.createTime} </td>
 									<td align="center">
-									<a href="${ctx }/lawsuit/uv_edit.do?coid=${uv.id}"><my:i18n zhText="编辑" enText="edit"/></a>
+									<a href="${ctx4ej }/lawsuit/uv_edit.do?coid=${uv.id}"><my:i18n zhText="编辑" enText="edit"/></a>
 									
 									   <%--<a href="javascript:" title="resetpassword" onclick="resetPassword('<my:i18n zhText="${user.userName}" enText="${user.enUserName}"/>','${user.id}')"><my:i18n zhText="重置密码" enText="Reset Password"/></a>	 --%>
 									</td>
@@ -115,43 +115,7 @@
 		         </table>
 			<div class="ltablebottom">
 
-				<div class="lpage">
-					<input type="hidden" name="pageVarName" value="page" /> <input
-						type="hidden" id="currentPage" name="page.currentPage" value="1" />
-					<input type="hidden" id="totalPage" name="page.totalPage" value="1" />
-					<input type="hidden" id="orderattr" name="page.orderattr" value="" />
-					<input type="hidden" id="ordertype" name="page.ordertype" value="" />
-					第1页 共1页 共<span id="pageTotalRecords">7</span>条| <font
-						color="#999999">首页</font>| <font color="#999999">上一页</font>| <font
-						color="#999999">下一页</font>| <font color="#999999">末页</font>| 每页<select
-						name="page.pageSize" id="page_pageSize"
-						onchange="toPage($('#totalPage')[0].form,'1');">
-						<option value="10" selected="selected">10</option>
-						<option value="20">20</option>
-						<option value="50">50</option>
-						<option value="100">100</option>
-					</select>条
-					<script type="text/javascript">
-						$(function() {
-							$('a.orderBy').click(
-									function() {
-										$('#orderattr')
-												.val($(this).attr('rel'));
-										if ($(this).attr('ordertype') == '') {
-											$('#ordertype').val('desc');
-										} else {
-											$('#ordertype').val(
-													$(this).attr('ordertype'));
-										}
-										$('#totalPage')[0].form.submit();
-									});
-						});
-						function toPage(form, currentPage) {
-							$('#currentPage').val(currentPage);
-							form.submit();
-						}
-					</script>
-				</div>
+				<div class="lpage"><my:page page="${page}"/></div>
 			</div>
 		</form>
 

@@ -8,7 +8,7 @@
 	        <result name="index">/front/jsp/index.jsp</result>
 	     </action>
 	</package-->
-	
+	<!--core myCenter-->
 	<!-- 郑州法院 -->
 	<package name="core" extends="default" namespace="/zzfy/core">
 	     <!-- 资源 -->
@@ -62,8 +62,7 @@
 	        <result name="daibiaoreg">/front/jsp/myCenter/daibiaoreg.jsp</result>
 	     </action>
 	</package>
-	
-	<!-- 新郑法院 -->
+	<!-- 新郑市 -->
 	<package name="xzcore" extends="default" namespace="/xzfy/core">
 	     <!-- 资源 -->
 	     <action name="resource_*" class="core.ResourceAction" method="{1}">
@@ -116,8 +115,7 @@
 	        <result name="daibiaoreg">/front/jsp/myCenter/daibiaoreg.jsp</result>
 	     </action>
 	</package>
-	
-	<!-- 荥阳法院 -->
+	<!-- 荥阳市 -->
 	<package name="xycore" extends="default" namespace="/xyfy/core">
 	     <!-- 资源 -->
 	     <action name="resource_*" class="core.ResourceAction" method="{1}">
@@ -170,5 +168,17 @@
 	        <result name="daibiaoreg">/front/jsp/myCenter/daibiaoreg.jsp</result>
 	     </action>
 	</package>
-	
+	<!-- 巩义市 -->
+	<!-- 登封市 -->
+	<!-- 新密市 -->
+	<!-- 中牟县 -->
+	<!-- 航空港区 -->
+	<!-- 金水区 -->
+	<!-- 二七区 -->
+	<!-- 中原区 -->
+	<!-- 管城区 -->
+	<!-- 惠济区 -->
+	<!-- 上街区 -->
+	<!-- 高新区 -->
+
 </struts>

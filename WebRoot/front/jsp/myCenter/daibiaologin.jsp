@@ -135,7 +135,7 @@
   </div>
 </div>
 <div class="copyrightbg">
- <%@include file="/common/static.jsp" %>
+ <%@include file="/common/commonfooter.jsp" %>
 </div>
 </body>
 </html>

@@ -124,6 +124,7 @@ public class CourtOpeningAction{
 		SysUser sysUser = new SysUser();
 		sysUser = Sessions.getSysUser();
 		if (!"".equals(coid) && coid != null) {
+			co.setOrganization(sysUser.getOrganization());
 			co.setUpdateTime(DateUtils.getCurrentDate());
 			co.setUpdateUserId(sysUser.getId());
 			String hql = ReflectionUtils.setObjToHql(co, coid);
@@ -132,6 +133,7 @@ public class CourtOpeningAction{
 			this.courtOpeningService.batch(new HqlBuilder(hql));
 		} else {
 			co.setCreateUser(sysUser);
+			co.setOrganization(sysUser.getOrganization());
 			co.setCreateTime(DateUtils.getCurrentDate());
 			this.courtOpeningService.save(co);
 		}

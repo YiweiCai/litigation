@@ -101,7 +101,7 @@ ${sf.pdirFile.recordText }
 		</div>
 </div>
 
-		<%@include file="/common/static.jsp" %>
+		<%@include file="/common/commonfooter.jsp" %>
 </body>
 <script type="text/javascript">
 	var flashvars = {

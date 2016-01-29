@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="my" uri="/mytags"%>
-<c:set var="ctx" value="${pageContext.request.contextPath}" />
+<%@include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -138,7 +136,7 @@
 		$("#submitBtn").submitForm({
 			formId : "channelForm",
 			onComplete : function() {
-				window.location.href = "${ctx}/lawsuit/uv_listVideo.do";
+				window.location.href = "${ctx4ej}/lawsuit/uv_listVideo.do";
 
 			}
 		});
@@ -154,7 +152,7 @@
 <script type="text/javascript">
 	function deleteUploadFile(id){
 		      if(confirm("删除将不可恢复，您确定要删除吗")){
-		    	  $.post("${ctx}/cms/article_deleteUploadFileByAjax.do",{"uploadFileId":id},
+		    	  $.post("${ctx4ej}/cms/article_deleteUploadFileByAjax.do",{"uploadFileId":id},
 		    		     function(ret){
 		    		    	 if(ret.code=="0"){
 		    		    		 alert("删除成功");
@@ -174,7 +172,7 @@
 	<div class="bodybox">
 
 		<div id="result" align="center" style="color: red;padding-top: 10px"></div>
-		<form method="post" action="${ctx }/lawsuit/uv_save.do"
+		<form method="post" action="${ctx4ej }/lawsuit/uv_save.do"
 			id="channelForm" enctype="multipart/form-data">
 			<input type="hidden" name="id" value="${uv.id}"> <input
 				type="hidden" name="parentId" value="">

@@ -65,6 +65,7 @@ public class CourtOpenInfoService {
 							// 该行的最后一个单元格
 							for (short cellNum = firstCellNum; cellNum <= 6; cellNum++) { // 循环该行的每一个单元格
 								HSSFCell cell = row.getCell(cellNum);
+
 								setCourtInfoValue(cellNum, getCellValue(cell)
 										.toString(), courtOpenInfo);
 							}

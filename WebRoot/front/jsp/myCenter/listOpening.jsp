@@ -1,17 +1,17 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/common/common.jsp"%>
+<%@ include file="/common/taglibs.jsp"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
 		<meta http-equiv="keywords" content="易云V1.0">
 		<title>庭审直播列表</title>
-		<%@ include file="/common/include.jsp"%>
+		<%@ include file="/common/title.jsp"%>
 		<script type="text/javascript" src="${ctx}/common/DatePicker/WdatePicker.js" language="javascript" ></script>
 		<link href="${ctx}/css/index.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
 		$(function(){
 			$(".searchbut").click(function(){
-				$("#frm").attr("action","${ctx }/app/welcome!getAllVideo.action");
+				$("#frm").attr("action","${ctx4ej }/app/welcome!getAllVideo.action");
 				$("#frm").submit();
 			});
 		})
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-<form action="${ctx }/app/welcome!getOpening.action" id="frm" method="post">
+<form action="${ctx4ej }/app/welcome!getOpening.action" id="frm" method="post">
 	<input type="hidden" id="did" name="did" value="${did}">
 
 <div id="bannerbg">
@@ -29,7 +29,7 @@
 </div>
 <div class="main">
   <div id="lefteare">
-   <a href="${ctx }"> <img src="${ctx}/images/homeicon.jpg" style="border:0"></a>
+   <a href="${ctx4ej }/index.htm"> <img src="${ctx}/images/homeicon.jpg" style="border:0"></a>
    <div class="videosearch">
       <h2>视频搜索</h2>
       <p>
@@ -53,7 +53,7 @@
       <h3>法庭列表</h3>
       <ul>
         <c:forEach items="${dirStructures }" var="d">
-	    	  <li><a href="${ctx }/app/welcome!getVideoFileByCourt.action?did=${d.id}">${d.dirName }</a></li>
+	    	  <li><a href="${ctx4ej }/app/welcome!getVideoFileByCourt.action?did=${d.id}">${d.dirName }</a></li>
     	</c:forEach>
       </ul>
     </div>
@@ -64,7 +64,7 @@
     <ul>
     <c:forEach items="${dirStructures }" var="d">
     	 <c:if test="${d.courtEquipment.status==1 || d.courtEquipment.status==3}">
-	    	 <a href="${ctx }/app/welcome!toViewVideo.action?did=${d.id}">
+	    	 <a href="${ctx4ej }/app/welcome!toViewVideo.action?did=${d.id}">
 	        <li>${d.dirName }：直播</li>
 	        </a>
 	        </c:if>
@@ -78,7 +78,7 @@
 </div>
   </div>
  
-<%@include file="/common/static.jsp" %>
+<%@include file="/common/commonfooter.jsp" %>
 </form>
 </body>
 </html>

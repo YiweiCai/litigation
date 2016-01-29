@@ -72,7 +72,7 @@
 </ul>
   </div>
   <div style="display: none;" class="aside" id="iframeDiv">
-	<iframe src="" id="iframepage" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="768" ></iframe>
+	<iframe src="" id="iframepage" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="auto" ></iframe>
 	</div>
   <div class="aside" id="aside">
     <div class="guidetitlebg"><a href="${ctx }">首页</a>>
@@ -109,6 +109,6 @@
 </div>
 </form>
 
-<%@include file="/common/static.jsp" %>
+<%@include file="/common/commonfooter.jsp" %>
 </body>
 </html>

@@ -30,6 +30,6 @@
    <div class="judgelist"> <a href="${ctx }/siteshow/faguanmessage.html" target="_">安士勇</a><a href="#">张明浩</a><a href="#">李丽</a><a href="#">纪高</a><a href="#">王松华</a><a href="#">李月明</a> <a href="#">丹萱</a><a href="#">晴雪</a><a href="#">怜菡</a><a href="#">睿婕</a><a href="#">语琴</a><a href="#">松翠</a> </div>
   </div>
 </div>
-<%@include file="/common/static.jsp" %>
+<%@include file="/common/commonfooter.jsp" %>
 </body>
 </html>

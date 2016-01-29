@@ -630,7 +630,28 @@ h5 {
 	float: right;
 	color: #444444;
 }
+.cou ul{
+	padding: 0px;
+	margin: 0px;
+}
+.cou ul li {
+	width: 247px;
+	height: 150px;
+	float: left;
+	margin-left: 3px;
+	padding-left: 0;
+	font-size:16px;
+	color: #000;
+	line-height: 23px;
+	display: block;
+	margin-bottom: 10px;
 
+}
+
+.cou .namefont{width: 247px; height:20px; line-height:20px;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+
+.cou span{font-size: 12px; padding-left:4px;}
 .court {
 	float: left;
 	width: 181px;

@@ -37,7 +37,7 @@ public class UploadVideoAction extends BaseUploadFileAction<UploadVideo> {
 	@Autowired
 	private UploadVideService uploadVideService;
 	private UploadVideo uv;
-	private Page page = new Page(Constants.PAGE_SIZE);
+	private Page page = new Page(9);
 	@Autowired
 	private UploadFileService uploadFileService;
 	private UploadFile uf;
@@ -70,7 +70,9 @@ public class UploadVideoAction extends BaseUploadFileAction<UploadVideo> {
 	}
 
 	public String listVideo() throws Exception {
-		String hql = "from UploadVideo uv";
+//		String hql = "from UploadVideo uv";
+		String requestNameSpace = Sessions.getSysUser().getOrganization();
+		String hql = "from UploadVideo uv where uv.organization='"+requestNameSpace+"'";
 		page = this.uploadVideService.findPage(page, new HqlBuilder(hql));
 		return "list";
 	}
@@ -78,7 +80,9 @@ public class UploadVideoAction extends BaseUploadFileAction<UploadVideo> {
 	@LoginValidation(validate = YN.N)
 	// 免登陆验证
 	public String flistVideo() throws Exception {
-		String hql = "select uv,uf.uploadFilePath from UploadVideo uv,UploadFile uf where uf.ownerId = uv.id and uf.uploadContentType like '%image%' ";
+		String requestNameSpace = (String) Servlets.getSession().getAttribute("requestNameSpace");
+//		String hql = "select uv,uf.uploadFilePath from UploadVideo uv,UploadFile uf where uf.ownerId = uv.id and uf.uploadContentType like '%image%' ";
+		String hql = "select uv,uf.uploadFilePath from UploadVideo uv,UploadFile uf where uf.ownerId = uv.id and uf.uploadContentType like '%image%' and uv.organization ='"+requestNameSpace+"' ";
 		page = this.uploadVideService.findPage(page, new HqlBuilder(hql));
 
 		return "flist";
@@ -153,6 +157,7 @@ public class UploadVideoAction extends BaseUploadFileAction<UploadVideo> {
 		} else {
 			uv.setCreateUser(sysUser);
 			uv.setCreateTime(DateUtils.getCurrentDate());
+			uv.setOrganization(sysUser.getOrganization());
 			this.uploadVideService.save(uv);
 
 		}

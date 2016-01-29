@@ -5,11 +5,11 @@
 <%--<my:head fck="true" datePicker="true" multiFile="true">--%>
 <my:head fck="true" datePicker="true" multiFile="true">
 <!-- 配置文件 -->
-    <link href="/js_css_image/js/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="/js_css_image/js/umeditor/umeditor.config.js"></script>
-    <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="/js_css_image/js/umeditor/umeditor.js"></script>
-    <script type="text/javascript" src="/js_css_image/js/umeditor/lang/zh-cn/zh-cn.js"></script>
+	<link href="${ctx }/js_css_image/js/ueditor/themes/default/css/ueditor.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="${ctx }/js_css_image/js/ueditor/ueditor.config.js"></script>
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="${ctx }/js_css_image/js/ueditor/ueditor.all.js"></script>
+	<script type="text/javascript" src="${ctx }/js_css_image/js/ueditor/lang/zh-cn/zh-cn.js"></script>
 	<script type="text/javascript">
 		var addordetail = true;
 		var tolisturl = "${ctx4ej}/cms/article_list.do?channelId=${channel.id}";
@@ -19,7 +19,7 @@
 			$("#submitBtn").submitForm({
 				formId:"articleForm",
 				onSubmit:function(){
-					$("#content").val(UM.getEditor('myEditor').getContent());
+					$("#content").val(UE.getEditor('myEditor').getContent());
 				},
 				onComplete:function(){
 				    window.location.href = tolisturl;
@@ -275,6 +275,6 @@
 </body>
 <script type="text/javascript">
     //实例化编辑器
-    var um = UM.getEditor('myEditor');
+    var um = UE.getEditor('myEditor');
 </script>
 </html>
