@@ -51,6 +51,7 @@
 	    	<result name="flist">/WEB-INF/jsp/lawsuit/co/flistVideo.jsp</result>
 	    	<result name="edit">/WEB-INF/jsp/lawsuit/co/editVideo.jsp</result>
 	    	<result name="view">/WEB-INF/jsp/lawsuit/co/viewVideo.jsp</result>
+			<result name="sufeijisuan">/WEB-INF/jsp/lawsuit/sfjs/suFeiJiSuan.jsp</result>
 	    </action>
 	    <!-- Cai -->
 	    <!-- S 开庭公告信息 -->
@@ -110,6 +111,7 @@
 	    	<result name="flist">/WEB-INF/jsp/lawsuit/co/flistVideo.jsp</result>
 	    	<result name="edit">/WEB-INF/jsp/lawsuit/co/editVideo.jsp</result>
 	    	<result name="view">/WEB-INF/jsp/lawsuit/co/viewVideo.jsp</result>
+			<result name="sufeijisuan">/WEB-INF/jsp/lawsuit/sfjs/suFeiJiSuan.jsp</result>
 	    </action>
 	    <!-- Cai -->
 	    <!-- S 开庭公告信息 -->
@@ -169,6 +171,7 @@
 	    	<result name="flist">/WEB-INF/jsp/lawsuit/co/flistVideo.jsp</result>
 	    	<result name="edit">/WEB-INF/jsp/lawsuit/co/editVideo.jsp</result>
 	    	<result name="view">/WEB-INF/jsp/lawsuit/co/viewVideo.jsp</result>
+			<result name="sufeijisuan">/WEB-INF/jsp/lawsuit/sfjs/suFeiJiSuan.jsp</result>
 	    </action>
 	    <!-- Cai -->
 	    <!-- S 开庭公告信息 -->

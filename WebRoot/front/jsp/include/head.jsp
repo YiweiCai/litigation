@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@include file="/common/taglibs.jsp"%>
-<link href="${ctx }/js_css_image/css/index.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/js_css_image/css/index.css" rel="stylesheet" type="text/css" />
 <div id="bannerbg">
   <div class="layout"><img src="${ctx }/js_css_image/images/index_${requestNameSpace}.jpg" /></div>
 </div>

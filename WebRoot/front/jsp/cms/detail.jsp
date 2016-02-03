@@ -51,8 +51,15 @@
 	<li class="blue">${channel.channelName }</li>
 	<div class="leftnavline"></div>
 	<c:choose>
-			
-			<c:when test="${channel.isDynamicUrl=='1'&&! empty channel.dynamicUrl}"><li id="${channel.id}"><a initClick="${channel.id}" href="#" onclick="changeDiv('${ctx4ej}${channel.dynamicUrl}','${channel.id}')">${channel.channelName }</a></li></c:when>
+
+		<c:when test="${(item.isDynamicUrl=='1'||item.isDynamicUrl=='3')&&! empty item.dynamicUrl}">
+			<c:if test="${fn:contains(item.dynamicUrl, 'front')==true}" >
+				<li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li>
+			</c:if>
+			<c:if test="${fn:contains(item.dynamicUrl, 'front')==false}" >
+				<li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${ctx4ej}${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li>
+			</c:if>
+		</c:when>
 			<c:when test="${channel.isDynamicUrl=='2'&&! empty channel.dynamicUrl}"><li id="${channel.id}"><a href="${channel.dynamicUrl}" target="_">${channel.channelName }</a></li></c:when>
 			<c:otherwise><li  id="${channel.id}"><a href="${ctx4ej}/cms/article_flist.htm?channelId=${channel.id}">${channel.channelName }</a></li></c:otherwise>
 	</c:choose>
@@ -62,8 +69,15 @@
 <li class="blue">${channel.cmsChannel.channelName }</li>
 <c:forEach  items="${channel.cmsChannel.cmsChannels}" var="item" varStatus="status">
 		<c:choose>
-			
-			<c:when test="${item.isDynamicUrl=='1'&&! empty item.dynamicUrl}"><li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${ctx4ej}${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li></c:when>
+
+			<c:when test="${(item.isDynamicUrl=='1'||item.isDynamicUrl=='3')&&! empty item.dynamicUrl}">
+				<c:if test="${fn:contains(item.dynamicUrl, 'front')==true}" >
+					<li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li>
+				</c:if>
+				<c:if test="${fn:contains(item.dynamicUrl, 'front')==false}" >
+					<li  id="${item.id}"><a href="#" initClick="${item.id}" onclick="changeDiv('${ctx4ej}${item.dynamicUrl}','${item.id}')">${item.channelName }</a></li>
+				</c:if>
+			</c:when>
 			<c:when test="${item.isDynamicUrl=='2'&&! empty item.dynamicUrl}"><li  id="${item.id}"><a href="${item.dynamicUrl}" target="_">${item.channelName }</a></li></c:when>
 			<c:otherwise><li  id="${item.id}"><a href="${ctx4ej}/cms/article_flist.htm?channelId=${item.id}">${item.channelName }</a></li></c:otherwise>
 		</c:choose>
@@ -72,7 +86,7 @@
 </ul>
   </div>
   <div style="display: none;" class="aside" id="iframeDiv">
-	<iframe src="" id="iframepage" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="auto" ></iframe>
+	<iframe src="" id="iframepage" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="1000" ></iframe>
 	</div>
   <div class="aside" id="aside">
     <div class="guidetitlebg"><a href="${ctx }">首页</a>>

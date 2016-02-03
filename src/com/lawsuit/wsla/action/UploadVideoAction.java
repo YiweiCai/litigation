@@ -42,6 +42,17 @@ public class UploadVideoAction extends BaseUploadFileAction<UploadVideo> {
 	private UploadFileService uploadFileService;
 	private UploadFile uf;
 
+
+	/***
+	 *  计算诉讼费用
+	 * @return
+	 * @throws Exception
+     */
+	@LoginValidation(validate = YN.N)
+	public String suFei() throws Exception{
+		return "sufeijisuan";
+	}
+
 	public Page getPage() {
 		return page;
 	}

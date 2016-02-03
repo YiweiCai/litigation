@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="my" uri="/mytags"  %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@ include file="/common/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <script type="text/javascript"  src="${ctx }/js_css_image/js/jquery/jquery-1.8.0.min.js"></script>
@@ -9,9 +7,9 @@
     <style type="text/css">.ztree li a:hover {text-decoration:none;}</style>
     <link href="${ctx }/js_css_image/css/case.css" rel="stylesheet" type="text/css" />
      <script type="text/javascript">
-		var listurl = "${ctx }/lawsuit/xf_list.do";
-        var addnewurl = "${ctx}/system/user_add.do?deptId=${deptId}&roleId=${roleId}";
-		var deleteurl = "${ctx }/system/user_delete.do";
+		var listurl = "${ctx4ej }/lawsuit/xf_list.do";
+        var addnewurl = "${ctx4ej}/system/user_add.do?deptId=${deptId}&roleId=${roleId}";
+		var deleteurl = "${ctx4ej }/system/user_delete.do";
 		$(function() {
 			//alert($.i18n("lang"));
 			//alert($.i18n("helloParam",["12222","233333"]));
@@ -20,13 +18,13 @@
 				$(this).html(t.substring(0,t.length-1));
 			});
 			$("#exportExcel").click(function(){
-				$("#userForm").attr("action","${ctx }/system/userreport_exportExcel.do").submit();
+				$("#userForm").attr("action","${ctx4ej }/system/userreport_exportExcel.do").submit();
 			});
 			$("#exportWord").click(function(){
-				$("#userForm").attr("action","${ctx }/system/userreport_exportWord.do").submit();
+				$("#userForm").attr("action","${ctx4ej }/system/userreport_exportWord.do").submit();
 			});
 			$("#exportPdf").click(function(){
-				$("#userForm").attr("action","${ctx }/system/userreport_exportPdf.do").submit();
+				$("#userForm").attr("action","${ctx4ej }/system/userreport_exportPdf.do").submit();
 			});
 			$("#searchButton").click(function(){
 				$("#userForm").attr("action",listurl).submit();
@@ -54,7 +52,7 @@
 	   
 			<div class="resulttitle"> ◆未提交立案</div>
 			
-		   <form action="${ctx }/lawsuit/xf_list.do" method="post" id="userForm">
+		   <form action="${ctx4ej }/lawsuit/xf_list.do" method="post" id="userForm">
 			  	
 		          <%-- 
 		            <input type="hidden" name="deptId" value="${deptId }"/>
@@ -91,9 +89,9 @@
 										</c:choose>
 									</td>
 									<td align="center">
-								     <a href="${ctx }/lawsuit/laxx_deleteWWC.do?id=${wc.id}"><my:i18n zhText="删除" enText="Edit"/></a>
+								     <a href="${ctx4ej }/lawsuit/laxx_deleteWWC.do?id=${wc.id}"><my:i18n zhText="删除" enText="Edit"/></a>
 								     &nbsp;&nbsp;
-								     <a onclick="goBack()" href="${ctx }/lawsuit/laxx_goBack.do?coid=${wc.id}&goTo=${wc.dqjd}"><my:i18n zhText="继续填写" enText="Edit"/></a>
+								     <a onclick="goBack()" href="${ctx4ej }/lawsuit/laxx_goBack.do?coid=${wc.id}&goTo=${wc.dqjd}"><my:i18n zhText="继续填写" enText="Edit"/></a>
 									</td>
 								</tr>
 				              </c:forEach>

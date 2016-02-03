@@ -55,8 +55,15 @@
 <c:if test="${channel.cmsChannel.id == '1' }">
 	<li class="blue">${channel.channelName }</li>
 	<c:choose>
-			
-			<c:when test="${(channel.isDynamicUrl=='1'||channel.isDynamicUrl=='3')&&! empty channel.dynamicUrl}"><li id="${channel.id}"><a initClick="${channel.id}" href="#" onclick="changeDiv('${ctx4ej}${channel.dynamicUrl}','${channel.id}')">${channel.channelName }</a></li></c:when>
+
+		<c:when test="${(channel.isDynamicUrl=='1'||channel.isDynamicUrl=='3')&&! empty channel.dynamicUrl}">
+			<c:if test="${fn:contains(channel.dynamicUrl, 'front')==true}" >
+				<li  id="${channel.id}"><a href="#" initClick="${channel.id}" onclick="changeDiv('${channel.dynamicUrl}','${channel.id}')">${channel.channelName }</a></li>
+			</c:if>
+			<c:if test="${fn:contains(channel.dynamicUrl, 'front')==false}" >
+				<li  id="${channel.id}"><a href="#" initClick="${channel.id}" onclick="changeDiv('${ctx4ej}${channel.dynamicUrl}','${channel.id}')">${channel.channelName }</a></li>
+			</c:if>
+		</c:when>
 			<c:when test="${channel.isDynamicUrl=='2'&&! empty channel.dynamicUrl}"><li id="${channel.id}"><a href="${channel.dynamicUrl}" target="_">${channel.channelName }</a></li></c:when>
 			<c:otherwise><li id="${channel.id}"><a href="${ctx4ej}/cms/article_flist.htm?channelId=${channel.id}">${channel.channelName }</a></li></c:otherwise>
 	</c:choose>

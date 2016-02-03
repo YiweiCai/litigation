@@ -260,7 +260,7 @@ public class LoginAction extends ActionSupport{
 
                 session.setAttribute(Constants.USER_SESSION_KEY, sysUser);
 
-                //myMailSender.sendMail(sysUser.getMailbox(), sysUser.getMailboxPassword(),new String[]{"372566232@qq.com"}, "我登录了", "我登录了");
+                //myMail80Sender.sendMail(sysUser.getMailbox(), sysUser.getMailboxPassword(),new String[]{"372566232@qq.com"}, "我登录了", "我登录了");
                 Renders.renderJson(new JsonResult("success"));
              	 return NONE;
             }else{

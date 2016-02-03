@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include file="/common/taglibs.jsp" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
+<%@ taglib prefix="my" uri="/mytags"  %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<c:set var="ctx4ej" value="${pageContext.request.contextPath}/${requestNameSpace}"/>
 <c:forEach items="${user.sysRoles}" var="role" varStatus="status">
     
     <c:if test="${role.id=='8ae99b51511de52301512e40e3ff000d' }">
@@ -7,13 +12,14 @@
     </c:if>
     
 </c:forEach>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 <%@ include file="/common/title.jsp" %>
-<link href="${ctx}/js_css_image/css/index.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="${ctx}/js_css_image/js/jquery/jquery-1.8.0.min.js"></script>
+<link href="/js_css_image/css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js_css_image/js/jquery/jquery-1.8.0.min.js"></script>
 <script type="text/javascript" >
 		function submitLogin(){
 		    	var valid = true;
@@ -49,7 +55,6 @@
 				 );
 	    
 	    }
-
 </script>
 </head>
 
@@ -149,8 +154,15 @@
 </div>
 <div class="grayline"></div>
 <div class="layeare">
-<ul><a href="${ctx4ej }/cms/article_flist.htm?channelId=402881fb509d319901509e0149bd0009"><li  class="buttonbg"><img src="${ctx }/js_css_image/images/wenshuicon.jpg"/>法律文书具有内容上的合法性、形式上的规范性、语言上的准确性等，可以下载常用的文书 [详细]</li></a>
-<li><a href="${ctx4ej }/myCenter/address.htm"><img src="${ctx }/js_css_image/images/mapenter.jpg"/></li></a>
+<ul>
+    <a href="${ctx4ej }/cms/article_flist.htm?channelId=402881fb509d319901509e0149bd0009">
+        <li  class="buttonbg">
+            <img src="${ctx }/js_css_image/images/wenshuicon.jpg"/>法律文书具有内容上的合法性、形式上的规范性、语言上的准确性等，可以下载常用的文书 [详细]
+        </li>
+    </a>
+    <li>
+        <a href="${ctx4ej }/myCenter/address.htm"><img src="${ctx }/js_css_image/images/mapenter.jpg"/></a>
+    </li>
 </ul>
 </div>
 <div class="grayline"></div>
